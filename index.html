@@ -436,7 +436,7 @@
     .panelbox h3{font-size:18px}
     .formrow{gap:9px}
     .fld{flex:1 1 46%;min-width:46%}
-    .fld input,.fld select,.fld textarea{width:100%;font-size:16px}
+    .fld input,.fld select,.fld textarea{width:100%;font-size:16px;box-sizing:border-box}
     .find input{font-size:16px}
     .formrow .btn{flex:1 1 100%}
     .formrow .tplbtnwrap{flex:1 1 100%}
@@ -454,6 +454,12 @@
     .btn{padding:11px 16px}
     .btn.small{padding:7px 11px}
     .modal{padding:20px;border-radius:15px}
+  }
+
+  /* samo najuži telefoni (iPhone mini / SE): polja u kolonu da se date i select ne sudaraju */
+  @media (max-width:380px){
+    .formrow{flex-direction:column;align-items:stretch}
+    .fld{flex:1 1 auto;width:100%;min-width:0}
   }
 
   @media (prefers-reduced-motion:reduce){
