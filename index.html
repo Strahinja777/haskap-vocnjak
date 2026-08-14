@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Haskap voćnjak, radna knjiga</title>
+<title>Haskap orchard, logbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
     --warn:#b7791f;
     --bad:#b13333;
 
-    /* mapa, zadržane vrednosti zbog proračuna u JS */
+    /* mapa, zadržane valuei zbog proračuna u JS */
     --col-w:54px;
     --gap:6px;
 
@@ -334,7 +334,7 @@
   .okstock{color:var(--good)}
   .money{font-variant-numeric:tabular-nums;white-space:nowrap}
 
-  /* --------- godišnji i pod tabovi, izbor redova --------- */
+  /* --------- godišnji i pod tabovi, izbor rows --------- */
   .yeartabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
   .yeartabs button{
     appearance:none;border:1px solid var(--line);background:var(--panel);border-radius:999px;
@@ -478,38 +478,38 @@
     table.t.cardify td{display:block;padding:6px 0;border:0;border-bottom:1px solid var(--line-soft);white-space:normal;text-align:left;line-height:1.35;font-size:13.5px;min-width:0;overflow-wrap:anywhere}
     table.t.cardify td.r{text-align:left;font-variant-numeric:tabular-nums}
     table.t.cardify td::before{display:block;margin-bottom:2px;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
-    table.tk-t.cardify td:not([colspan]):nth-of-type(1)::before{content:"Datum"}
-    table.tk-t.done.cardify td:not([colspan]):nth-of-type(1)::before{content:"Obavljeno"}
-    table.tk-t.cardify td:not([colspan]):nth-of-type(2)::before{content:"Vrsta"}
-    table.tk-t.cardify td:not([colspan]):nth-of-type(3)::before{content:"Obuhvat"}
+    table.tk-t.cardify td:not([colspan]):nth-of-type(1)::before{content:"Date"}
+    table.tk-t.done.cardify td:not([colspan]):nth-of-type(1)::before{content:"Done"}
+    table.tk-t.cardify td:not([colspan]):nth-of-type(2)::before{content:"Type"}
+    table.tk-t.cardify td:not([colspan]):nth-of-type(3)::before{content:"Scope"}
     table.tk-t.cardify td:not([colspan]):nth-of-type(4)::before{content:"Opis"}
-    #hv-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Datum"}
+    #hv-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Date"}
     #hv-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Red"}
-    #hv-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Sorta"}
+    #hv-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Variety"}
     #hv-table.cardify td:not([colspan]):nth-of-type(4)::before{content:"kg"}
-    #hv-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Napomena"}
+    #hv-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Note"}
     #hv-table.cardify td:not([colspan]):nth-of-type(5){grid-column:1/-1}
-    #fn-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Datum"}
+    #fn-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Date"}
     #fn-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Tip"}
-    #fn-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Kategorija"}
+    #fn-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Category"}
     #fn-table.cardify td:not([colspan]):nth-of-type(4)::before{content:"Opis"}
     #fn-table.cardify td:not([colspan]):nth-of-type(4){grid-column:1/-1;order:5}
     #fn-table.cardify td:not([colspan]):nth-of-type(5){order:4}
     #fn-table.cardify td:last-child{order:6}
-    #fn-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Iznos"}
+    #fn-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Amount"}
     #cu-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Kupac"}
-    #cu-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Kontakt"}
-    #cu-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Kanal"}
+    #cu-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Contact"}
+    #cu-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Channel"}
     #cu-table.cardify td:not([colspan]):nth-of-type(4)::before{content:"kg"}
-    #cu-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Cena/kg"}
-    #cu-table.cardify td:not([colspan]):nth-of-type(6)::before{content:"Vrednost"}
+    #cu-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Price/kg"}
+    #cu-table.cardify td:not([colspan]):nth-of-type(6)::before{content:"Value"}
     #cu-table.cardify td:not([colspan]):nth-of-type(7)::before{content:"Isporuka"}
-    #cu-table.cardify td:not([colspan]):nth-of-type(8)::before{content:"Napomena"}
-    #iv-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Naziv"}
-    #iv-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Kategorija"}
-    #iv-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Stanje"}
+    #cu-table.cardify td:not([colspan]):nth-of-type(8)::before{content:"Note"}
+    #iv-table.cardify td:not([colspan]):nth-of-type(1)::before{content:"Name"}
+    #iv-table.cardify td:not([colspan]):nth-of-type(2)::before{content:"Category"}
+    #iv-table.cardify td:not([colspan]):nth-of-type(3)::before{content:"Stock"}
     #iv-table.cardify td:not([colspan]):nth-of-type(4)::before{content:"Min."}
-    #iv-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Izmena"}
+    #iv-table.cardify td:not([colspan]):nth-of-type(5)::before{content:"Adjust"}
     #iv-table.cardify td:not([colspan]):nth-of-type(5){grid-column:1/-1}
     table.t.cardify td:last-child{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;padding-top:10px;border-bottom:0}
     table.t.cardify td:last-child::before{display:none}
@@ -641,50 +641,50 @@
     <div class="titleblock">
       <span class="mast-mark"><img src="data:image/jpeg;base64,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" alt="Haskap logo" width="58" height="58"></span>
       <div class="titletext">
-        <p class="eyebrow">Radna knjiga zasada</p>
-        <h1>Haskap voćnjak</h1>
+        <p class="eyebrow">Orchard logbook</p>
+        <h1>Haskap orchard</h1>
       </div>
     </div>
     <div class="stats">
       <div class="yearpick">
-        <span class="lab">Godina</span>
+        <span class="lab">Year</span>
         <div class="yearpick-row">
           <select id="gl-year"></select>
-          <button class="iconbtn" id="gl-year-add" title="Dodaj godinu">+</button>
+          <button class="iconbtn" id="gl-year-add" title="Add godinu">+</button>
         </div>
       </div>
-      <div class="stat"><div class="num" id="st-rows">0</div><div class="lab">redova</div></div>
-      <div class="stat"><div class="num" id="st-bush">0</div><div class="lab">žbunova</div></div>
-      <div class="stat"><div class="num" id="st-vars">0</div><div class="lab">sorti</div></div>
+      <div class="stat"><div class="num" id="st-rows">0</div><div class="lab">rows</div></div>
+      <div class="stat"><div class="num" id="st-bush">0</div><div class="lab">bushes</div></div>
+      <div class="stat"><div class="num" id="st-vars">0</div><div class="lab">varieties</div></div>
     </div>
   </header>
 
   <nav class="tabs" id="tabs">
-    <button data-t="pregled" class="on">Pregled<span class="tabbadge" id="pg-badge"></span></button>
-    <button data-t="mapa">Mapa</button>
-    <button data-t="poslovi">Poslovi</button>
-    <button data-t="berba">Berba</button>
-    <button data-t="fin">Finansije</button>
-    <button data-t="kupci">Kupci</button>
-    <button data-t="magacin">Magacin</button>
-    <button data-t="kontakti">Kontakti</button>
-    <button data-t="izv">Izveštaji</button>
-    <button data-t="podaci">Podaci</button>
+    <button data-t="pregled" class="on">Overview<span class="tabbadge" id="pg-badge"></span></button>
+    <button data-t="mapa">Map</button>
+    <button data-t="poslovi">Tasks</button>
+    <button data-t="berba">Harvest</button>
+    <button data-t="fin">Finances</button>
+    <button data-t="kupci">Customers</button>
+    <button data-t="magacin">Inventory</button>
+    <button data-t="kontakti">Contacts</button>
+    <button data-t="izv">Reports</button>
+    <button data-t="podaci">Data</button>
   </nav>
 
   <section class="tab on" id="tab-pregled">
     <div class="pgcols">
       <div class="panelbox pgcol">
-        <h3 class="rp-title" style="margin-top:0">Poslovi koji dolaze</h3>
+        <h3 class="rp-title" style="margin-top:0">Upcoming tasks</h3>
         <div id="pg-tasks"></div>
       </div>
       <div class="panelbox pgcol">
-        <h3 class="rp-title" style="margin-top:0">Žbunovi za akciju<span id="pg-actions-count"></span></h3>
+        <h3 class="rp-title" style="margin-top:0">Bushes for action<span id="pg-actions-count"></span></h3>
         <div id="pg-actions"></div>
       </div>
     </div>
     <div class="panelbox">
-      <h3 class="rp-title" style="margin-top:0">Prognoza</h3>
+      <h3 class="rp-title" style="margin-top:0">Forecast</h3>
       <div class="wxgrid" id="pg-wx"></div>
     </div>
   </section>
@@ -693,151 +693,151 @@
     <div class="toolbar">
       <div class="legend" id="legend"></div>
       <div class="controls">
-        <div class="find"><input id="findid" placeholder="npr. R3-07"><button class="tgl" id="btn-find">Nađi</button></div>
-        <button class="tgl on" id="btn-labels">Oznake u žbunu</button>
-        <button class="tgl" id="btn-teren">Teren mod</button>
-        <button class="tgl" id="btn-actiononly">Samo za akciju</button>
+        <div class="find"><input id="findid" placeholder="e.g. R3-07"><button class="tgl" id="btn-find">Find</button></div>
+        <button class="tgl on" id="btn-labels">Bush labels</button>
+        <button class="tgl" id="btn-teren">Field mode</button>
+        <button class="tgl" id="btn-actiononly">Action only</button>
         <div class="zoomctl">
           <button class="tgl" id="zoom-out" title="Odzumiraj">−</button>
           <span id="zoom-lab">100%</span>
           <button class="tgl" id="zoom-in" title="Zumiraj">+</button>
-          <button class="tgl" id="zoom-fit" title="Prikaži ceo voćnjak">Ceo voćnjak</button>
+          <button class="tgl" id="zoom-fit" title="Show whole orchard">Whole orchard</button>
         </div>
       </div>
     </div>
-    <p class="muted" id="teren-hint" style="display:none">Teren mod: uvećan prikaz za rad napolju. Dodir na žbun otvara brzi unos: akcija, beleške i fotografije.</p>
+    <p class="muted" id="teren-hint" style="display:none">Field mode: enlarged view for outdoor work. Tapping a bush opens quick entry: action, notes and photos.</p>
     <div class="mapshell"><div id="mapscale"><div id="rows"></div></div></div>
-    <div class="scalebox"><span class="scalebar"></span><span>1 m</span><span>Klik na žbun otvara njegovu karticu.</span></div>
+    <div class="scalebox"><span class="scalebar"></span><span>1 m</span><span>Click a bush to open its card.</span></div>
     <div class="panelbox">
-      <h3>Ukupno po sorti</h3>
-      <div class="tablewrap"><table class="t" id="tot"><thead><tr><th>Sorta</th><th class="r">Žbunova</th><th class="r">Udeo</th></tr></thead><tbody></tbody></table></div>
+      <h3>Total by variety</h3>
+      <div class="tablewrap"><table class="t" id="tot"><thead><tr><th>Variety</th><th class="r">Bushes</th><th class="r">Share</th></tr></thead><tbody></tbody></table></div>
     </div>
   </section>
 
   <section class="tab" id="tab-poslovi">
     <div class="panelbox">
-      <h3>Poslovi</h3>
-      <h4 class="sect" style="margin-top:6px">Novi posao</h4>
+      <h3>Tasks</h3>
+      <h4 class="sect" style="margin-top:6px">New task</h4>
       <div class="formrow">
-        <div class="fld"><label>Datum</label><input type="date" id="tk-date"></div>
-        <div class="fld"><label>Vrsta</label><select id="tk-type"><option>Orezivanje</option><option>Prihrana</option><option>Zaštita</option><option>Navodnjavanje</option><option>Berba</option><option>Korov i malč</option><option>Mreža protiv ptica</option><option>Ostalo</option></select></div>
-        <div class="fld"><label>Tip posla</label><select id="tk-kind"><option value="plan">Godišnji plan</option><option value="adhoc">Vanredan posao</option></select></div>
-        <div class="fld"><label>Obuhvat</label><select id="tk-scope"></select></div>
-        <div class="fld" style="flex:1;min-width:180px"><label>Opis</label><input id="tk-desc" placeholder="npr. đubrenje NPK"></div>
+        <div class="fld"><label>Date</label><input type="date" id="tk-date"></div>
+        <div class="fld"><label>Type</label><select id="tk-type"><option>Pruning</option><option>Fertilising</option><option>Protection</option><option>Irrigation</option><option>Harvest</option><option>Weeds and mulch</option><option>Bird netting</option><option>Other</option></select></div>
+        <div class="fld"><label>Task type</label><select id="tk-kind"><option value="plan">Annual plan</option><option value="adhoc">Ad-hoc task</option></select></div>
+        <div class="fld"><label>Scope</label><select id="tk-scope"></select></div>
+        <div class="fld" style="flex:1;min-width:180px"><label>Opis</label><input id="tk-desc" placeholder="e.g. NPK fertiliser"></div>
       </div>
       <div class="rowpick" id="tk-rows" style="display:none"></div>
       <div class="rowpick" id="tk-vars" style="display:none"></div>
       <div class="formrow" style="margin-top:10px">
-        <button class="btn" id="tk-add">Dodaj posao</button><span class="limitnote" id="tk-limit-note"></span>
+        <button class="btn" id="tk-add">Add task</button><span class="limitnote" id="tk-limit-note"></span>
       </div>
     </div>
     <div class="panelbox">
-      <h3 class="rp-title" style="margin-top:0">Godišnji plan za <span id="yr-lab1"></span></h3>
+      <h3 class="rp-title" style="margin-top:0">Annual plan for <span id="yr-lab1"></span></h3>
       <div class="formrow" style="margin-bottom:14px">
         <span class="tplbtnwrap">
-          <button class="btn sec" id="tk-plan">Ubaci šablon godišnjih poslova</button>
-          <button class="iconbtn edge" id="tk-plan-edit" title="Izmeni šablon godišnjih poslova">✎</button>
+          <button class="btn sec" id="tk-plan">Insert annual task template</button>
+          <button class="iconbtn edge" id="tk-plan-edit" title="Edit annual task template">✎</button>
         </span>
       </div>
       <div class="acc open" id="acc-plan-open">
-        <div class="acc-head" onclick="toggleAcc('acc-plan-open')"><div class="acc-title">Predstojeći poslovi <span class="acc-count" id="cnt-plan-open">0</span></div><span class="acc-arrow">▾</span></div>
-        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t" id="tk-plan-t"><thead><tr><th>Datum</th><th>Vrsta</th><th>Obuhvat</th><th>Opis i beleške</th><th></th></tr></thead><tbody></tbody></table></div></div>
+        <div class="acc-head" onclick="toggleAcc('acc-plan-open')"><div class="acc-title">Upcoming tasks <span class="acc-count" id="cnt-plan-open">0</span></div><span class="acc-arrow">▾</span></div>
+        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t" id="tk-plan-t"><thead><tr><th>Date</th><th>Type</th><th>Scope</th><th>Description and notes</th><th></th></tr></thead><tbody></tbody></table></div></div>
       </div>
       <div class="acc" id="acc-plan-done">
-        <div class="acc-head" onclick="toggleAcc('acc-plan-done')"><div class="acc-title">Obavljeni poslovi <span class="acc-count" id="cnt-plan-done">0</span></div><span class="acc-arrow">▾</span></div>
-        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t done" id="tk-plan-done-t"><thead><tr><th>Obavljeno</th><th>Vrsta</th><th>Obuhvat</th><th>Opis i beleške</th><th></th></tr></thead><tbody></tbody></table></div></div>
+        <div class="acc-head" onclick="toggleAcc('acc-plan-done')"><div class="acc-title">Completed tasks <span class="acc-count" id="cnt-plan-done">0</span></div><span class="acc-arrow">▾</span></div>
+        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t done" id="tk-plan-done-t"><thead><tr><th>Done</th><th>Type</th><th>Scope</th><th>Description and notes</th><th></th></tr></thead><tbody></tbody></table></div></div>
       </div>
     </div>
     <div class="panelbox">
-      <h3 class="rp-title" style="margin-top:0">Vanredni poslovi u <span id="yr-lab2"></span></h3>
+      <h3 class="rp-title" style="margin-top:0">Ad-hoc tasks in <span id="yr-lab2"></span></h3>
       <div class="acc open" id="acc-adhoc-open">
-        <div class="acc-head" onclick="toggleAcc('acc-adhoc-open')"><div class="acc-title">Predstojeći poslovi <span class="acc-count" id="cnt-adhoc-open">0</span></div><span class="acc-arrow">▾</span></div>
-        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t" id="tk-adhoc-t"><thead><tr><th>Datum</th><th>Vrsta</th><th>Obuhvat</th><th>Opis i beleške</th><th></th></tr></thead><tbody></tbody></table></div></div>
+        <div class="acc-head" onclick="toggleAcc('acc-adhoc-open')"><div class="acc-title">Upcoming tasks <span class="acc-count" id="cnt-adhoc-open">0</span></div><span class="acc-arrow">▾</span></div>
+        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t" id="tk-adhoc-t"><thead><tr><th>Date</th><th>Type</th><th>Scope</th><th>Description and notes</th><th></th></tr></thead><tbody></tbody></table></div></div>
       </div>
       <div class="acc" id="acc-adhoc-done">
-        <div class="acc-head" onclick="toggleAcc('acc-adhoc-done')"><div class="acc-title">Obavljeni poslovi <span class="acc-count" id="cnt-adhoc-done">0</span></div><span class="acc-arrow">▾</span></div>
-        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t done" id="tk-adhoc-done-t"><thead><tr><th>Obavljeno</th><th>Vrsta</th><th>Obuhvat</th><th>Opis i beleške</th><th></th></tr></thead><tbody></tbody></table></div></div>
+        <div class="acc-head" onclick="toggleAcc('acc-adhoc-done')"><div class="acc-title">Completed tasks <span class="acc-count" id="cnt-adhoc-done">0</span></div><span class="acc-arrow">▾</span></div>
+        <div class="acc-body"><div class="tablewrap"><table class="t cardify tk-t done" id="tk-adhoc-done-t"><thead><tr><th>Done</th><th>Type</th><th>Scope</th><th>Description and notes</th><th></th></tr></thead><tbody></tbody></table></div></div>
       </div>
     </div>
   </section>
 
   <section class="tab" id="tab-berba">
     <div class="panelbox">
-      <h3>Berba</h3>
-      <h4 class="sect" style="margin-top:6px">Unos berbe</h4>
+      <h3>Harvest</h3>
+      <h4 class="sect" style="margin-top:6px">Harvest entry</h4>
       <div class="formrow">
-        <div class="fld"><label>Datum</label><input type="date" id="hv-date"></div>
-        <div class="fld"><label>Obuhvat</label><select id="hv-row"></select></div>
-        <div class="fld"><label>Sorta</label><select id="hv-var"></select></div>
-        <div class="fld"><label>Kilograma</label><input type="number" id="hv-kg" min="0" step="0.1"></div>
-        <div class="fld" style="flex:1;min-width:140px"><label>Napomena</label><input id="hv-note"></div>
-        <button class="btn" id="hv-add">Dodaj</button><span class="limitnote" id="hv-limit-note"></span>
+        <div class="fld"><label>Date</label><input type="date" id="hv-date"></div>
+        <div class="fld"><label>Scope</label><select id="hv-row"></select></div>
+        <div class="fld"><label>Variety</label><select id="hv-var"></select></div>
+        <div class="fld"><label>Kilograms</label><input type="number" id="hv-kg" min="0" step="0.1"></div>
+        <div class="fld" style="flex:1;min-width:140px"><label>Note</label><input id="hv-note"></div>
+        <button class="btn" id="hv-add">Add</button><span class="limitnote" id="hv-limit-note"></span>
       </div>
       <div class="rowpick" id="hv-rows" style="display:none"></div>
     </div>
     <div id="hv-summary"></div>
     <div class="panelbox">
-      <h3 class="rp-title" style="margin-top:0">Dnevnik berbe za <span id="hv-yr-lab"></span></h3>
-      <div class="tablewrap"><table class="t cardify" id="hv-table"><thead><tr><th>Datum</th><th>Red</th><th>Sorta</th><th class="r">kg</th><th>Napomena</th><th></th></tr></thead><tbody></tbody></table></div>
+      <h3 class="rp-title" style="margin-top:0">Harvest log for <span id="hv-yr-lab"></span></h3>
+      <div class="tablewrap"><table class="t cardify" id="hv-table"><thead><tr><th>Date</th><th>Row</th><th>Variety</th><th class="r">kg</th><th>Note</th><th></th></tr></thead><tbody></tbody></table></div>
     </div>
   </section>
 
   <section class="tab" id="tab-fin">
     <div class="panelbox">
-      <h3>Finansije</h3>
-      <h4 class="sect" style="margin-top:6px">Nova stavka</h4>
+      <h3>Finances</h3>
+      <h4 class="sect" style="margin-top:6px">New item</h4>
       <div class="formrow">
-        <div class="fld"><label>Datum</label><input type="date" id="fn-date"></div>
-        <div class="fld"><label>Tip</label><select id="fn-kind"><option value="trosak">Trošak</option><option value="prihod">Prihod</option></select></div>
-        <div class="fld"><label>Kategorija</label><select id="fn-cat"></select></div>
-        <div class="fld"><label>Iznos</label><input type="number" id="fn-amt" min="0" step="1"></div>
+        <div class="fld"><label>Date</label><input type="date" id="fn-date"></div>
+        <div class="fld"><label>Tip</label><select id="fn-kind"><option value="trosak">Expense</option><option value="prihod">Income</option></select></div>
+        <div class="fld"><label>Category</label><select id="fn-cat"></select></div>
+        <div class="fld"><label>Amount</label><input type="number" id="fn-amt" min="0" step="1"></div>
         <div class="fld" style="flex:1;min-width:140px"><label>Opis</label><input id="fn-desc"></div>
-        <button class="btn" id="fn-add">Dodaj</button><span class="limitnote" id="fn-limit-note"></span>
+        <button class="btn" id="fn-add">Add</button><span class="limitnote" id="fn-limit-note"></span>
       </div>
     </div>
     <div id="fn-summary"></div>
     <div class="panelbox">
-      <h3 class="rp-title" style="margin-top:0">Knjiga stavki za <span id="fn-yr-lab"></span></h3>
-      <div class="tablewrap"><table class="t cardify" id="fn-table"><thead><tr><th>Datum</th><th>Tip</th><th>Kategorija</th><th>Opis</th><th class="r">Iznos</th><th></th></tr></thead><tbody></tbody></table></div>
+      <h3 class="rp-title" style="margin-top:0">Ledger for <span id="fn-yr-lab"></span></h3>
+      <div class="tablewrap"><table class="t cardify" id="fn-table"><thead><tr><th>Date</th><th>Tip</th><th>Category</th><th>Opis</th><th class="r">Amount</th><th></th></tr></thead><tbody></tbody></table></div>
     </div>
   </section>
 
   <section class="tab" id="tab-kupci">
     <div class="panelbox">
-      <h3>Kupci i porudžbine</h3>
+      <h3>Customers and orders</h3>
       <div class="subtabs" id="cu-sub">
-        <button data-s="porudzbine" class="on">Porudžbine</button>
-        <button data-s="pregled">Pregled</button>
+        <button data-s="porudzbine" class="on">Orders</button>
+        <button data-s="pregled">Overview</button>
       </div>
       <div id="cu-porudzbine">
         <div class="pricebox">
           <div class="pricerow">
-            <div class="fld" style="margin:0"><label>Cena po kg za <span id="cu-yr-lab3"></span></label><input type="number" id="cu-year-price" min="0" step="1" placeholder="npr. 800" style="width:110px"></div>
-            <button class="btn" id="cu-price-apply">Primeni na sve porudžbine</button>
+            <div class="fld" style="margin:0"><label>Price per kg for <span id="cu-yr-lab3"></span></label><input type="number" id="cu-year-price" min="0" step="1" placeholder="e.g. 800" style="width:110px"></div>
+            <button class="btn" id="cu-price-apply">Apply to all orders</button>
           </div>
-          <p class="pricenote">Popunjava cenu svim porudžbinama te godine. Pojedinačnu cenu i dalje možeš menjati u kartici kupca.</p>
+          <p class="pricenote">Fills the price for all orders that year. You can still change individual prices in the customer card.</p>
         </div>
-        <h4 class="sect">Nova porudžbina za <span id="cu-yr-lab"></span></h4>
+        <h4 class="sect">New order for <span id="cu-yr-lab"></span></h4>
         <div class="formrow">
-          <div class="fld"><label>Ime i prezime</label><input id="cu-name"></div>
-          <div class="fld"><label>Kontakt</label><input id="cu-contact" placeholder="telefon, mejl, Instagram"></div>
-          <div class="fld"><label>Adresa</label><input id="cu-addr"></div>
-          <div class="fld"><label>Kanal</label><select id="cu-chan"><option>Instagram</option><option>Facebook</option><option>Telefon</option><option>Preporuka</option><option>Pijaca</option><option>Ostalo</option></select></div>
+          <div class="fld"><label>Full name</label><input id="cu-name"></div>
+          <div class="fld"><label>Contact</label><input id="cu-contact" placeholder="phone, email, Instagram"></div>
+          <div class="fld"><label>Address</label><input id="cu-addr"></div>
+          <div class="fld"><label>Channel</label><select id="cu-chan"><option>Instagram</option><option>Facebook</option><option>Phone</option><option>Referral</option><option>Market</option><option>Other</option></select></div>
         </div>
         <div class="formrow">
-          <div class="fld"><label>Količina (kg)</label><input type="number" id="cu-qty" min="0" step="0.1"></div>
-          <div class="fld"><label>Cena po kg</label><input type="number" id="cu-price" min="0" step="1"></div>
-          <div class="fld" style="flex:1;min-width:150px"><label>Napomena</label><input id="cu-note"></div>
-          <button class="btn" id="cu-add">Dodaj</button><span class="limitnote" id="cu-limit-note"></span>
+          <div class="fld"><label>Quantity (kg)</label><input type="number" id="cu-qty" min="0" step="0.1"></div>
+          <div class="fld"><label>Price per kg</label><input type="number" id="cu-price" min="0" step="1"></div>
+          <div class="fld" style="flex:1;min-width:150px"><label>Note</label><input id="cu-note"></div>
+          <button class="btn" id="cu-add">Add</button><span class="limitnote" id="cu-limit-note"></span>
         </div>
-        <h4 class="sect">Porudžbine u <span id="cu-yr-lab2"></span></h4>
-        <div style="margin-bottom:12px"><input id="cu-search" class="listsearch" placeholder="Pretraga po imenu ili kontaktu"></div>
+        <h4 class="sect">Orders in <span id="cu-yr-lab2"></span></h4>
+        <div style="margin-bottom:12px"><input id="cu-search" class="listsearch" placeholder="Search by name or contact"></div>
         <div class="acc open" id="acc-cu-pend">
-          <div class="acc-head" onclick="toggleAcc('acc-cu-pend')"><div class="acc-title">Za isporuku <span class="acc-count" id="cnt-cu-pend">0</span></div><span class="acc-arrow">▾</span></div>
+          <div class="acc-head" onclick="toggleAcc('acc-cu-pend')"><div class="acc-title">To deliver <span class="acc-count" id="cnt-cu-pend">0</span></div><span class="acc-arrow">▾</span></div>
           <div class="acc-body"><div id="cu-pend-list"></div></div>
         </div>
         <div class="acc" id="acc-cu-done">
-          <div class="acc-head" onclick="toggleAcc('acc-cu-done')"><div class="acc-title">Isporučeno <span class="acc-count" id="cnt-cu-done">0</span></div><span class="acc-arrow">▾</span></div>
+          <div class="acc-head" onclick="toggleAcc('acc-cu-done')"><div class="acc-title">Delivered <span class="acc-count" id="cnt-cu-done">0</span></div><span class="acc-arrow">▾</span></div>
           <div class="acc-body"><div id="cu-done-list"></div></div>
         </div>
       </div>
@@ -849,31 +849,31 @@
 
   <section class="tab" id="tab-magacin">
     <div class="panelbox" id="mg-zalihe">
-      <h3>Stanje zaliha</h3>
+      <h3>Stock level</h3>
       <div class="formrow">
-        <div class="fld"><label>Naziv</label><input id="iv-name" placeholder="npr. crevo 16 mm"></div>
-        <div class="fld"><label>Kategorija</label><select id="iv-cat"><option>Zaštita</option><option>Đubrivo</option><option>Ambalaža</option><option>Zalivni sistem</option><option>Alat</option><option>Sadni materijal</option><option>Ostalo</option></select></div>
-        <div class="fld"><label>Količina</label><input type="number" id="iv-qty" step="0.1"></div>
-        <div class="fld"><label>Jedinica</label><input id="iv-unit" placeholder="kom, l, kg, m" style="width:90px"></div>
-        <div class="fld"><label>Min. zaliha</label><input type="number" id="iv-min" step="0.1" style="width:90px"></div>
-        <button class="btn" id="iv-add">Dodaj</button><span class="limitnote" id="iv-limit-note"></span>
+        <div class="fld"><label>Name</label><input id="iv-name" placeholder="e.g. 16 mm hose"></div>
+        <div class="fld"><label>Category</label><select id="iv-cat"><option>Protection</option><option>Fertiliser</option><option>Packaging</option><option>Irrigation system</option><option>Tools</option><option>Planting material</option><option>Other</option></select></div>
+        <div class="fld"><label>Quantity</label><input type="number" id="iv-qty" step="0.1"></div>
+        <div class="fld"><label>Unit</label><input id="iv-unit" placeholder="pcs, l, kg, m" style="width:90px"></div>
+        <div class="fld"><label>Min. stock</label><input type="number" id="iv-min" step="0.1" style="width:90px"></div>
+        <button class="btn" id="iv-add">Add</button><span class="limitnote" id="iv-limit-note"></span>
       </div>
-      <div class="tablewrap"><table class="t cardify" id="iv-table"><thead><tr><th>Naziv</th><th>Kategorija</th><th class="r">Stanje</th><th>Min.</th><th>Izmena</th><th></th></tr></thead><tbody></tbody></table></div>
+      <div class="tablewrap"><table class="t cardify" id="iv-table"><thead><tr><th>Name</th><th>Category</th><th class="r">Stock</th><th>Min.</th><th>Adjust</th><th></th></tr></thead><tbody></tbody></table></div>
     </div>
 
   </section>
 
   <section class="tab" id="tab-kontakti">
     <div class="panelbox" id="mg-kontakti">
-      <h3>Kontakti</h3>
-      <p class="muted">Radnici, dobavljači, kooperanti, majstori. Sve na jednom mestu, uz brzi poziv i mejl.</p>
+      <h3>Contacts</h3>
+      <p class="muted">Workers, suppliers, partners, tradesmen. All in one place, with quick call and email.</p>
       <div class="formrow">
-        <div class="fld"><label>Ime</label><input id="ct-name"></div>
-        <div class="fld"><label>Uloga</label><select id="ct-role"><option>Radnik</option><option>Dobavljač</option><option>Kooperant</option><option>Majstor</option><option>Prevoz</option><option>Ostalo</option></select></div>
-        <div class="fld"><label>Telefon</label><input id="ct-phone"></div>
-        <div class="fld"><label>Mejl</label><input id="ct-email"></div>
-        <div class="fld" style="flex:1;min-width:150px"><label>Napomena</label><input id="ct-note" placeholder="npr. dnevnica, šta isporučuje"></div>
-        <button class="btn" id="ct-add">Dodaj</button><span class="limitnote" id="ct-limit-note"></span>
+        <div class="fld"><label>Name</label><input id="ct-name"></div>
+        <div class="fld"><label>Role</label><select id="ct-role"><option>Worker</option><option>Supplier</option><option>Partner</option><option>Tradesman</option><option>Transport</option><option>Other</option></select></div>
+        <div class="fld"><label>Phone</label><input id="ct-phone"></div>
+        <div class="fld"><label>Email</label><input id="ct-email"></div>
+        <div class="fld" style="flex:1;min-width:150px"><label>Note</label><input id="ct-note" placeholder="e.g. daily rate, what they supply"></div>
+        <button class="btn" id="ct-add">Add</button><span class="limitnote" id="ct-limit-note"></span>
       </div>
       <div class="cardgrid" id="ct-cards"></div>
     </div>
@@ -881,12 +881,12 @@
 
   <section class="tab" id="tab-izv">
     <div class="panelbox report">
-      <h3>Izveštaji</h3>
-      <p class="muted">Izveštaj sažima sezonu na jednom mestu: zasad, berbu, poslove, finansije i zdravlje žbunova. Pogodan za štampu, arhivu ili dokumentaciju za subvencije.</p>
+      <h3>Reports</h3>
+      <p class="muted">The report summarises the season in one place: the planting, harvest, tasks, finances and bush health. Suitable for printing, archiving or subsidy documentation.</p>
       <div class="formrow">
-        <div class="fld"><label>Godina</label><select id="rp-year"></select></div>
-        <button class="btn" id="rp-gen">Generiši izveštaj</button>
-        <button class="btn sec" id="rp-print">Štampaj / PDF</button>
+        <div class="fld"><label>Year</label><select id="rp-year"></select></div>
+        <button class="btn" id="rp-gen">Generate report</button>
+        <button class="btn sec" id="rp-print">Print / PDF</button>
       </div>
     </div>
     <div id="rp-out"></div>
@@ -894,31 +894,31 @@
 
   <section class="tab" id="tab-podaci">
     <div class="panelbox">
-      <h3>Podešavanja</h3>
+      <h3>Settings</h3>
       <div class="formrow">
-        <div class="fld"><label>Naziv lokacije</label><input id="set-loc"></div>
-        <div class="fld"><label>Geografska širina</label><input type="number" id="set-lat" step="0.0001"></div>
-        <div class="fld"><label>Geografska dužina</label><input type="number" id="set-lon" step="0.0001"></div>
-        <div class="fld"><label>Valuta</label><input id="set-cur"></div>
-        <button class="btn" id="set-save">Sačuvaj</button>
+        <div class="fld"><label>Location name</label><input id="set-loc"></div>
+        <div class="fld"><label>Latitude</label><input type="number" id="set-lat" step="0.0001"></div>
+        <div class="fld"><label>Longitude</label><input type="number" id="set-lon" step="0.0001"></div>
+        <div class="fld"><label>Currency</label><input id="set-cur"></div>
+        <button class="btn" id="set-save">Save</button>
       </div>
     </div>
     <div class="panelbox">
-      <h3>Rezervna kopija i izvoz</h3>
+      <h3>Backup and export</h3>
       <div class="formrow">
-        <button class="btn" id="ex-json">Izvezi sve podatke (JSON)</button>
-        <button class="btn sec" id="im-json">Uvezi podatke (JSON)</button>
+        <button class="btn" id="ex-json">Export all data (JSON)</button>
+        <button class="btn sec" id="im-json">Import data (JSON)</button>
         <input type="file" id="im-file" accept=".json" style="display:none">
       </div>
       <div class="formrow">
-        <button class="btn sec" id="ex-hv">Berba CSV</button>
-        <button class="btn sec" id="ex-fn">Finansije CSV</button>
-        <button class="btn sec" id="ex-tk">Poslovi CSV</button>
-        <button class="btn sec" id="ex-bu">Žbunovi CSV</button>
-        <button class="btn sec" id="ex-cu">Kupci CSV</button>
-        <button class="btn sec" id="ex-iv">Zalihe CSV</button>
-        <button class="btn sec" id="ex-ct">Kontakti CSV</button>
-        <button class="btn sec" id="ex-print">Štampa / PDF</button>
+        <button class="btn sec" id="ex-hv">Harvest CSV</button>
+        <button class="btn sec" id="ex-fn">Finances CSV</button>
+        <button class="btn sec" id="ex-tk">Tasks CSV</button>
+        <button class="btn sec" id="ex-bu">Bushes CSV</button>
+        <button class="btn sec" id="ex-cu">Customers CSV</button>
+        <button class="btn sec" id="ex-iv">Inventory CSV</button>
+        <button class="btn sec" id="ex-ct">Contacts CSV</button>
+        <button class="btn sec" id="ex-print">Print / PDF</button>
       </div>
       <p class="savebanner" id="save-banner"></p>
     </div>
@@ -940,13 +940,13 @@ const $=id=>document.getElementById(id);
 const todayStr=()=>new Date().toISOString().slice(0,10);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const fmtN=n=>Number(n||0).toLocaleString('sr-RS',{maximumFractionDigits:1});
+const fmtN=n=>Number(n||0).toLocaleString('en-US',{maximumFractionDigits:1});
 const fmtD=s=>{if(!s)return '';const p=String(s).split('-');if(p.length!==3)return String(s);return (+p[2])+'/'+(+p[1])+'/'+p[0];};
 
 /* ---------- skladište podataka ---------- */
 const KEY='haskap_premium_v1';
 let storageOK=true;
-let store={version:1,settings:{loc:'Voćnjak, Lovćenac',lat:45.663,lon:19.566,cur:'RSD'},bushes:{},tasks:[],harvest:[],fin:[],taskYears:[],customers:[],inventory:[],contacts:[],yearPrices:{}};
+let store={version:1,settings:{loc:'Orchard, Lovćenac',lat:45.663,lon:19.566,cur:'RSD'},bushes:{},tasks:[],harvest:[],fin:[],taskYears:[],customers:[],inventory:[],contacts:[],yearPrices:{}};
 try{
   const raw=localStorage.getItem(KEY);
   if(raw){const p=JSON.parse(raw); if(p&&p.version) store=Object.assign(store,p);}
@@ -958,11 +958,11 @@ try{
 function save(){
   if(storageOK){try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){storageOK=false;}}
   const b=$('save-banner');
-  if(b){b.textContent=storageOK?('Sačuvano lokalno, '+new Date().toLocaleTimeString('sr-RS')):'Pažnja: čuvanje u pregledaču nije dostupno, podaci žive samo dok je stranica otvorena. Izvezi JSON kopiju.';b.className='savebanner'+(storageOK?'':' warn');}
+  if(b){b.textContent=storageOK?('Saved locally, '+new Date().toLocaleTimeString('en-US')):'Warning: browser storage is unavailable, data lives only while the page is open. Export a JSON copy.';b.className='savebanner'+(storageOK?'':' warn');}
   updateLimitNotes();
 }
 
-/* ---------- test verzija: limit unosa po sekciji ---------- */
+/* ---------- test verzija: limit entries po sekciji ---------- */
 /* Da ukloniš ograničenje kad test faza prođe, promeni TEST_MODE u false. */
 const TEST_MODE=true;
 const TEST_LIMITS={tasks:3,harvest:3,fin:3,customers:3,inventory:3,contacts:3};
@@ -970,7 +970,7 @@ function atLimit(key,label){
   if(!TEST_MODE)return false;
   const n=(store[key]||[]).length;
   const lim=TEST_LIMITS[key];
-  if(n>=lim){alert('Dostignut je limit unosa za test verziju ('+lim+' u sekciji '+label+'). Za punu verziju bez ograničenja javi se Matcos AI.');return true;}
+  if(n>=lim){alert('You have reached the entry limit for the test version ('+lim+' u sekciji '+label+'). For the full version without limits, contact Matcos AI.');return true;}
   return false;
 }
 function updateLimitNotes(){
@@ -980,7 +980,7 @@ function updateLimitNotes(){
     const el=document.getElementById(pre+'-limit-note');
     if(!el)return;
     const n=(store[map[pre]]||[]).length,lim=TEST_LIMITS[map[pre]];
-    el.textContent='Test verzija: '+n+'/'+lim+' unosa';
+    el.textContent='Test version: '+n+'/'+lim+' entries';
     el.classList.toggle('full',n>=lim);
   });
 }
@@ -998,7 +998,7 @@ function headerStats(){
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
   document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='tab-'+b.dataset.t));
-  if(b.dataset.t==='pregled') renderPregled();
+  if(b.dataset.t==='pregled') renderOverview();
   if(b.dataset.t==='mapa') initZoom();
 });
 
@@ -1033,14 +1033,14 @@ function renderMap(){
   const topline=document.createElement('div');topline.className='topline';topline.style.top=HEADERH+'px';rowsEl.appendChild(topline);
   const axis=document.createElement('div');axis.className='axis';
   axis.innerHTML='<div class="axhead">'+
-      '<div class="l-rn"><span class="lbl">broj reda</span></div>'+
-      '<div class="l-rv"><span class="lbl">sorta</span></div>'+
-      '<div class="l-rl"><span class="lbl">dužina reda</span></div>'+
+      '<div class="l-rn"><span class="lbl">row no.</span></div>'+
+      '<div class="l-rv"><span class="lbl">variety</span></div>'+
+      '<div class="l-rl"><span class="lbl">row length</span></div>'+
     '</div>'+
     '<div class="stems" style="height:'+stemsH+'px"></div>'+
     '<div class="axfoot">'+
-      '<div class="l-v"><span class="lbl">žbunova u redu</span></div>'+
-      '<div class="l-v"><span class="lbl">razmak sadnje</span></div>'+
+      '<div class="l-v"><span class="lbl">bushes per row</span></div>'+
+      '<div class="l-v"><span class="lbl">planting spacing</span></div>'+
     '</div>';
   rowsEl.appendChild(axis);
   for(let i=DATA.length-1;i>=0;i--){
@@ -1057,7 +1057,7 @@ function renderMap(){
     head.innerHTML='<div class="rn">R'+rn+'</div>'+
       '<div class="rv">'+esc(mix?'Miks':META[prim].disp)+'</div>'+
       '<div class="rl">'+lenTxt+'</div>';
-    head.title='Red '+rn+', '+N+' žbunova, razmak sadnje '+sp+' cm';
+    head.title='Row '+rn+', '+N+' bushes, planting spacing '+sp+' cm';
     col.appendChild(head);
     const stems=document.createElement('div');stems.className='stems';stems.style.height=stemsH+'px';
     for(let k=0;k<N;k++){
@@ -1104,26 +1104,26 @@ $('zoom-fit').onclick=()=>fitZoom();
 $('btn-find').onclick=()=>{
   const q=$('findid').value.trim().toUpperCase();
   const b=document.querySelector('.bush[data-id="'+q+'"]');
-  if(!b){alert('Žbun '+q+' nije pronađen. Format je npr. R3-07.');return;}
+  if(!b){alert('Bush '+q+' not found. Format is e.g. R3-07.');return;}
   b.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
   b.classList.remove('flash');void b.offsetWidth;b.classList.add('flash');
 };
 
-/* ---------- kartica žbuna ---------- */
+/* ---------- kartica busha ---------- */
 function openModal(html){$('modal').innerHTML=html;$('modalbg').classList.add('on');}
 function closeModal(){$('modalbg').classList.remove('on');}
 $('modalbg').addEventListener('click',e=>{if(e.target.id==='modalbg')closeModal();});
 
-const ACAT=['Zalivanje','Bolest','Oštećenje','Zamena','Ostalo'];
+const ACAT=['Watering','Disease','Damage','Replacement','Other'];
 
 function plantLabel(id,v,rec){
-  const val=(rec&&rec.plant)?esc(rec.plant):'dodaj';
-  return '<span class="plantchip" onclick="editPlant(\''+id+'\',\''+v+'\')">Sadnja: '+val+'</span>';
+  const val=(rec&&rec.plant)?esc(rec.plant):'add';
+  return '<span class="plantchip" onclick="editPlant(\''+id+'\',\''+v+'\')">Planted: '+val+'</span>';
 }
 function editPlant(id,v){
   const rec=store.bushes[id]||{};
   const w=document.getElementById('plantwrap');if(!w)return;
-  w.innerHTML='<input id="plant-in" type="number" value="'+esc(rec.plant||'')+'" placeholder="godina" style="width:80px"> <button class="btn small" onclick="savePlant(\''+id+'\',\''+v+'\')">OK</button>';
+  w.innerHTML='<input id="plant-in" type="number" value="'+esc(rec.plant||'')+'" placeholder="year" style="width:80px"> <button class="btn small" onclick="savePlant(\''+id+'\',\''+v+'\')">OK</button>';
   setTimeout(()=>{const e=document.getElementById('plant-in');if(e){e.focus();e.addEventListener('keydown',ev=>{if(ev.key==='Enter')savePlant(id,v);});}},30);
 }
 function savePlant(id,v){
@@ -1136,12 +1136,12 @@ function savePlant(id,v){
 function notesHTML(id,v,rec,q){
   return (rec.notes||[]).slice().reverse().map((n,ri)=>{
     const realIdx=(rec.notes.length-1)-ri;
-    return '<div class="noteitem"><div class="nd">'+fmtD(n.d)+'</div>'+esc(n.t)+' <button class="btn danger small" onclick="delNote(\''+id+'\','+realIdx+',\''+v+'\','+(q?1:0)+')">Obriši</button></div>';
-  }).join('')||'<p class="muted">Nema beleški.</p>';
+    return '<div class="noteitem"><div class="nd">'+fmtD(n.d)+'</div>'+esc(n.t)+' <button class="btn danger small" onclick="delNote(\''+id+'\','+realIdx+',\''+v+'\','+(q?1:0)+')">Delete</button></div>';
+  }).join('')||'<p class="muted">No notes.</p>';
 }
 function photosHTML(id,v,rec,q){
   const photos=(rec.photos||[]);
-  if(!photos.length)return q?'<p class="muted">Nema fotografija.</p>':'<p class="muted">Nema fotografija.</p>';
+  if(!photos.length)return q?'<p class="muted">No photos.</p>':'<p class="muted">No photos.</p>';
   return '<div class="photogrid">'+photos.slice().reverse().map(p=>
     '<div class="photothumb"><img src="'+p.src+'" alt="" onclick="viewPhoto(\''+id+'\',\''+v+'\',\''+p.id+'\','+(q?1:0)+')"><div class="pcap"><span class="pd">'+fmtD(p.d)+'</span></div></div>'
   ).join('')+'</div>';
@@ -1151,22 +1151,22 @@ function openBush(id,v){
   const rec=store.bushes[id]||{plant:'',notes:[]};
   const rn=id.split('-')[0].slice(1);
   const act=rec.action||null;
-  const acatOpts='<option value="">Nije za akciju</option>'+ACAT.map(c=>'<option'+(act&&act.cat===c?' selected':'')+'>'+c+'</option>').join('');
-  const flagLine=act?'<span class="actflag">Za akciju: '+esc(act.cat)+(act.reason?', '+esc(act.reason):'')+'</span>':'';
+  const acatOpts='<option value="">Not for action</option>'+ACAT.map(c=>'<option'+(act&&act.cat===c?' selected':'')+'>'+c+'</option>').join('');
+  const flagLine=act?'<span class="actflag">For action: '+esc(act.cat)+(act.reason?', '+esc(act.reason):'')+'</span>':'';
   openModal(
-    '<h3>'+id+'</h3><div class="sub">'+esc(META[v].full)+', red '+rn+', razmak '+(SPAC[+rn]||70)+' cm '+flagLine+' <span class="plantwrap" id="plantwrap">'+plantLabel(id,v,rec)+'</span></div>'+
-    '<h3 style="font-size:16px">Za akciju</h3>'+
-    '<div class="formrow"><div class="fld"><label>Oznaka</label><select id="bu-acat">'+acatOpts+'</select></div>'+
-    '<div class="fld" style="flex:1;min-width:150px"><label>Razlog</label><input id="bu-area" value="'+esc(act?act.reason||'':'')+'" placeholder="npr. oštećen zalivni sistem"></div>'+
-    '<button class="btn" onclick="saveBush(\''+id+'\',\''+v+'\')">Sačuvaj</button></div>'+
-    (act?'<div class="formrow" style="margin-top:-4px"><button class="btn sec small" onclick="resolveAction(\''+id+'\',\''+v+'\')">Reši akciju</button></div>':'')+
-    '<h3 style="font-size:16px">Beleške</h3>'+notesHTML(id,v,rec,false)+
-    '<div class="formrow" style="margin-top:10px"><div class="fld" style="flex:1"><label>Nova beleška</label><input id="bu-note"></div>'+
-    '<button class="btn sec" onclick="addNote(\''+id+'\',\''+v+'\')">Dodaj</button></div>'+
-    '<h3 style="font-size:16px">Fotografije</h3>'+photosHTML(id,v,rec,false)+
-    '<div class="formrow" style="margin-top:10px"><label class="btn sec filelabel">Dodaj fotografiju<input type="file" accept="image/*" capture="environment" onchange="addPhoto(\''+id+'\',\''+v+'\',this,0)"></label></div>'+
-    '<p class="muted" style="margin-top:-2px">Slika se automatski smanji i sačuva na uređaju. Radi i bez interneta.</p>'+
-    '<div class="formrow"><button class="btn sec" onclick="closeModal()">Zatvori</button></div>');
+    '<h3>'+id+'</h3><div class="sub">'+esc(META[v].full)+', row '+rn+', spacing '+(SPAC[+rn]||70)+' cm '+flagLine+' <span class="plantwrap" id="plantwrap">'+plantLabel(id,v,rec)+'</span></div>'+
+    '<h3 style="font-size:16px">For action</h3>'+
+    '<div class="formrow"><div class="fld"><label>Flag</label><select id="bu-acat">'+acatOpts+'</select></div>'+
+    '<div class="fld" style="flex:1;min-width:150px"><label>Reason</label><input id="bu-area" value="'+esc(act?act.reason||'':'')+'" placeholder="e.g. damaged irrigation"></div>'+
+    '<button class="btn" onclick="saveBush(\''+id+'\',\''+v+'\')">Save</button></div>'+
+    (act?'<div class="formrow" style="margin-top:-4px"><button class="btn sec small" onclick="resolveAction(\''+id+'\',\''+v+'\')">Resolve action</button></div>':'')+
+    '<h3 style="font-size:16px">Notes</h3>'+notesHTML(id,v,rec,false)+
+    '<div class="formrow" style="margin-top:10px"><div class="fld" style="flex:1"><label>New note</label><input id="bu-note"></div>'+
+    '<button class="btn sec" onclick="addNote(\''+id+'\',\''+v+'\')">Add</button></div>'+
+    '<h3 style="font-size:16px">Photos</h3>'+photosHTML(id,v,rec,false)+
+    '<div class="formrow" style="margin-top:10px"><label class="btn sec filelabel">Add photo<input type="file" accept="image/*" capture="environment" onchange="addPhoto(\''+id+'\',\''+v+'\',this,0)"></label></div>'+
+    '<p class="muted" style="margin-top:-2px">The photo is automatically resized and saved on the device. Works offline too.</p>'+
+    '<div class="formrow"><button class="btn sec" onclick="closeModal()">Close</button></div>');
 }
 function saveBush(id,v){
   const rec=store.bushes[id]||{notes:[]};
@@ -1174,12 +1174,12 @@ function saveBush(id,v){
   const area=$('bu-area')?$('bu-area').value.trim():'';
   if(acat){rec.action={cat:acat,reason:area,d:(rec.action&&rec.action.d)?rec.action.d:todayStr()};}
   else if(rec.action){delete rec.action;}
-  store.bushes[id]=rec;save();renderMap();if(typeof renderPregled==='function')renderPregled();openBush(id,v);
+  store.bushes[id]=rec;save();renderMap();if(typeof renderOverview==='function')renderOverview();openBush(id,v);
 }
 function resolveAction(id,v){
   const rec=store.bushes[id];if(!rec||!rec.action)return;
-  const a=rec.action;rec.notes=rec.notes||[];rec.notes.push({d:todayStr(),t:'Rešeno: '+a.cat+(a.reason?' ('+a.reason+')':'')});
-  delete rec.action;save();renderMap();if(typeof renderPregled==='function')renderPregled();
+  const a=rec.action;rec.notes=rec.notes||[];rec.notes.push({d:todayStr(),t:'Resolved: '+a.cat+(a.reason?' ('+a.reason+')':'')});
+  delete rec.action;save();renderMap();if(typeof renderOverview==='function')renderOverview();
   if(v!==undefined&&v!=='')openBush(id,v);
 }
 function addNote(id,v){
@@ -1190,11 +1190,11 @@ function addNote(id,v){
 }
 function delNote(id,idx,v,q){
   const rec=store.bushes[id];if(!rec)return;
-  rec.notes.splice(idx,1);save();renderMap();if(typeof renderPregled==='function')renderPregled();
+  rec.notes.splice(idx,1);save();renderMap();if(typeof renderOverview==='function')renderOverview();
   if(q)quickNote(id,v);else openBush(id,v);
 }
 
-/* ---------- fotografije žbuna (offline, smanjenje u pregledaču) ---------- */
+/* ---------- fotografije busha (offline, smanjenje u pregledaču) ---------- */
 function addPhoto(id,v,input,q){
   const f=input.files&&input.files[0];if(!f){return;}
   const reader=new FileReader();
@@ -1210,10 +1210,10 @@ function addPhoto(id,v,input,q){
       rec.photos=rec.photos||[];rec.photos.push({id:uid(),d:todayStr(),src:src});
       store.bushes[id]=rec;
       const wasOK=storageOK;save();
-      if(wasOK&&!storageOK){rec.photos.pop();alert('Nema dovoljno prostora u pregledaču za ovu sliku, pa nije sačuvana. Izvezi JSON kopiju, obriši nešto ili dodaj manje slika.');}
+      if(wasOK&&!storageOK){rec.photos.pop();alert('Not enough space in the browser for this photo, so it was not saved. Export a JSON copy, delete something or add fewer photos.');}
       renderMap();if(q)quickNote(id,v);else openBush(id,v);
     };
-    img.onerror=function(){alert('Nije moguće učitati sliku.');};
+    img.onerror=function(){alert('Cannot load the image.');};
     img.src=reader.result;
   };
   reader.readAsDataURL(f);
@@ -1222,10 +1222,10 @@ function addPhoto(id,v,input,q){
 function viewPhoto(id,v,pid,q){
   const rec=store.bushes[id];const p=(rec&&rec.photos)?rec.photos.find(x=>x.id===pid):null;if(!p)return;
   const back=q?('quickNote(\''+id+'\',\''+v+'\')'):('openBush(\''+id+'\',\''+v+'\')');
-  openModal('<h3 style="font-size:18px">Fotografija</h3><div class="sub">'+fmtD(p.d)+'</div>'+
+  openModal('<h3 style="font-size:18px">Photo</h3><div class="sub">'+fmtD(p.d)+'</div>'+
     '<img src="'+p.src+'" alt="" style="width:100%;border-radius:12px;display:block">'+
-    '<div class="formrow" style="margin-top:12px"><button class="btn sec" onclick="'+back+'">Nazad</button>'+
-    '<button class="btn danger" onclick="delPhoto(\''+id+'\',\''+v+'\',\''+pid+'\','+(q?1:0)+')">Obriši sliku</button></div>');
+    '<div class="formrow" style="margin-top:12px"><button class="btn sec" onclick="'+back+'">Back</button>'+
+    '<button class="btn danger" onclick="delPhoto(\''+id+'\',\''+v+'\',\''+pid+'\','+(q?1:0)+')">Delete photo</button></div>');
 }
 function delPhoto(id,v,pid,q){
   const rec=store.bushes[id];if(!rec||!rec.photos)return;
@@ -1237,32 +1237,32 @@ function delPhoto(id,v,pid,q){
 function quickNote(id,v){
   const rec=store.bushes[id]||{plant:'',notes:[]};const act=rec.action||null;
   const qbtns=ACAT.slice(0,4).map(c=>'<button class="qbtn'+(act&&act.cat===c?' on':'')+'" onclick="fieldFlag(\''+id+'\',\''+v+'\',\''+c+'\')">'+c+'</button>').join('')+
-    (act?'<button class="qbtn resolve" onclick="fieldResolve(\''+id+'\',\''+v+'\')">Reši</button>':'');
-  openModal('<h3>'+id+'</h3><div class="sub">'+esc(META[v].full)+', teren</div>'+
-    '<h3 style="font-size:15px;margin:6px 0 8px">Označi za akciju</h3>'+
+    (act?'<button class="qbtn resolve" onclick="fieldResolve(\''+id+'\',\''+v+'\')">Resolve</button>':'');
+  openModal('<h3>'+id+'</h3><div class="sub">'+esc(META[v].full)+', field</div>'+
+    '<h3 style="font-size:15px;margin:6px 0 8px">Flag for action</h3>'+
     '<div class="qactions">'+qbtns+'</div>'+
-    '<h3 style="font-size:15px;margin:16px 0 6px">Beleške</h3>'+notesHTML(id,v,rec,true)+
-    '<div class="formrow" style="margin-top:8px"><div class="fld" style="flex:1"><label>Nova beleška</label><textarea id="qn-t" rows="2" style="width:100%"></textarea></div></div>'+
-    '<div class="formrow"><button class="btn" style="flex:1;padding:12px" onclick="saveQuick(\''+id+'\',\''+v+'\')">Sačuvaj belešku</button></div>'+
-    '<h3 style="font-size:15px;margin:14px 0 6px">Fotografije</h3>'+photosHTML(id,v,rec,true)+
-    '<div class="formrow" style="margin-top:8px"><label class="btn sec filelabel" style="flex:1;justify-content:center">Dodaj sliku<input type="file" accept="image/*" capture="environment" onchange="addPhoto(\''+id+'\',\''+v+'\',this,1)"></label></div>'+
-    '<div class="formrow" style="margin-top:12px"><button class="btn sec" style="flex:1" onclick="closeModal()">Zatvori</button></div>');
+    '<h3 style="font-size:15px;margin:16px 0 6px">Notes</h3>'+notesHTML(id,v,rec,true)+
+    '<div class="formrow" style="margin-top:8px"><div class="fld" style="flex:1"><label>New note</label><textarea id="qn-t" rows="2" style="width:100%"></textarea></div></div>'+
+    '<div class="formrow"><button class="btn" style="flex:1;padding:12px" onclick="saveQuick(\''+id+'\',\''+v+'\')">Save note</button></div>'+
+    '<h3 style="font-size:15px;margin:14px 0 6px">Photos</h3>'+photosHTML(id,v,rec,true)+
+    '<div class="formrow" style="margin-top:8px"><label class="btn sec filelabel" style="flex:1;justify-content:center">Add photo<input type="file" accept="image/*" capture="environment" onchange="addPhoto(\''+id+'\',\''+v+'\',this,1)"></label></div>'+
+    '<div class="formrow" style="margin-top:12px"><button class="btn sec" style="flex:1" onclick="closeModal()">Close</button></div>');
 }
 function saveQuick(id,v){
   const t=$('qn-t')?$('qn-t').value.trim():'';if(!t){return;}
   const rec=store.bushes[id]||{plant:'',notes:[]};
   rec.notes=rec.notes||[];rec.notes.push({d:todayStr(),t:t});
-  store.bushes[id]=rec;save();renderMap();if(typeof renderPregled==='function')renderPregled();quickNote(id,v);
+  store.bushes[id]=rec;save();renderMap();if(typeof renderOverview==='function')renderOverview();quickNote(id,v);
 }
 function fieldFlag(id,v,cat){
   const rec=store.bushes[id]||{plant:'',notes:[]};
   const note=$('qn-t')?$('qn-t').value.trim():'';
   if(note){rec.notes=rec.notes||[];rec.notes.push({d:todayStr(),t:note});}
   rec.action={cat:cat,reason:note,d:(rec.action&&rec.action.d)?rec.action.d:todayStr()};
-  store.bushes[id]=rec;save();renderMap();if(typeof renderPregled==='function')renderPregled();quickNote(id,v);
+  store.bushes[id]=rec;save();renderMap();if(typeof renderOverview==='function')renderOverview();quickNote(id,v);
 }
 function fieldResolve(id,v){
-  const rec=store.bushes[id];if(rec&&rec.action){delete rec.action;save();renderMap();if(typeof renderPregled==='function')renderPregled();}
+  const rec=store.bushes[id];if(rec&&rec.action){delete rec.action;save();renderMap();if(typeof renderOverview==='function')renderOverview();}
   quickNote(id,v);
 }
 /* ---------- tabela ukupno ---------- */
@@ -1274,7 +1274,7 @@ function renderTotals(){
     tb.appendChild(tr);
   });
   const trT=document.createElement('tr');
-  trT.innerHTML='<td><strong>Ukupno</strong></td><td class="r"><strong>'+totalBush+'</strong></td><td class="r"><strong>100%</strong></td>';
+  trT.innerHTML='<td><strong>Total</strong></td><td class="r"><strong>'+totalBush+'</strong></td><td class="r"><strong>100%</strong></td>';
   tb.appendChild(trT);
 }
 </script>
@@ -1319,12 +1319,12 @@ function setYear(y){
   renderGlobalYear();renderTasks();renderHarvest();renderFin();renderCustomers();
   const ry=$('rp-year');if(ry&&[...ry.options].some(o=>o.value===curYear))ry.value=curYear;
 }
-/* obuhvat: ceo voćnjak, izbor redova, sorta */
+/* obuhvat: ceo voćnjak, izbor rows, sorta */
 const scopeSel=$('tk-scope');
 let pickedRows=new Set();
 let pickedVars=new Set();
 (function(){
-  const opts=['Ceo voćnjak','Izbor redova','Izbor sorti'];
+  const opts=['Whole orchard','Select rows','Select varieties'];
   scopeSel.innerHTML=opts.map(o=>'<option>'+esc(o)+'</option>').join('');
   const rp=$('tk-rows');
   for(let i=1;i<=DATA.length;i++){
@@ -1339,48 +1339,48 @@ let pickedVars=new Set();
     vp.appendChild(c);
   });
   scopeSel.onchange=()=>{
-    $('tk-rows').style.display=scopeSel.value==='Izbor redova'?'flex':'none';
-    $('tk-vars').style.display=scopeSel.value==='Izbor sorti'?'flex':'none';
+    $('tk-rows').style.display=scopeSel.value==='Select rows'?'flex':'none';
+    $('tk-vars').style.display=scopeSel.value==='Select varieties'?'flex':'none';
   };
 })();
 $('tk-add').onclick=()=>{
-  if(atLimit('tasks','Poslovi'))return;
-  const d=$('tk-date').value;if(!d){alert('Unesi datum.');return;}
+  if(atLimit('tasks','Tasks'))return;
+  const d=$('tk-date').value;if(!d){alert('Enter a date.');return;}
   let scope=scopeSel.value;
-  if(scope==='Izbor redova'){
-    if(!pickedRows.size){alert('Označi bar jedan red.');return;}
-    scope='Redovi '+[...pickedRows].sort((a,b)=>+a.slice(1)-+b.slice(1)).join(', ');
-  }else if(scope==='Izbor sorti'){
-    if(!pickedVars.size){alert('Označi bar jednu sortu.');return;}
-    scope='Sorte '+[...pickedVars].map(v=>META[v].disp).join(', ');
+  if(scope==='Select rows'){
+    if(!pickedRows.size){alert('Select at least one row.');return;}
+    scope='Rows '+[...pickedRows].sort((a,b)=>+a.slice(1)-+b.slice(1)).join(', ');
+  }else if(scope==='Select varieties'){
+    if(!pickedVars.size){alert('Select at least one variety.');return;}
+    scope='Varieties '+[...pickedVars].map(v=>META[v].disp).join(', ');
   }
   store.tasks.push({id:uid(),date:d,type:$('tk-type').value,kind:$('tk-kind').value,scope:scope,desc:$('tk-desc').value.trim(),done:false,notes:[]});
   $('tk-desc').value='';pickedRows.clear();pickedVars.clear();
   document.querySelectorAll('#tk-rows .rp').forEach(x=>x.classList.remove('on'));
   document.querySelectorAll('#tk-vars .rp').forEach(x=>x.classList.remove('on'));
   addYear(d.slice(0,4));curYear=d.slice(0,4);
-  save();renderGlobalYear();renderTasks();if(typeof renderPregled==='function')renderPregled();
+  save();renderGlobalYear();renderTasks();if(typeof renderOverview==='function')renderOverview();
 };
-const DEFAULT_PLAN=[{md:'02-15',type:'Orezivanje',desc:'Zimsko orezivanje, uklanjanje starih i polomljenih grana'},
-  {md:'03-10',type:'Prihrana',desc:'Osnovno prolećno đubrenje'},
-  {md:'04-01',type:'Korov i malč',desc:'Kontrola korova i dopuna malča'},
-  {md:'04-25',type:'Mreža protiv ptica',desc:'Postavljanje mreže pre zrenja'},
-  {md:'05-20',type:'Berba',desc:'Početak kontrole zrelosti i berbe'},
-  {md:'06-15',type:'Prihrana',desc:'Prihrana posle berbe'},
-  {md:'07-01',type:'Navodnjavanje',desc:'Letnja kontrola zalivanja'},
-  {md:'10-15',type:'Prihrana',desc:'Jesenja prihrana i priprema za zimu'}];
-const TK_TYPES=['Orezivanje','Prihrana','Zaštita','Navodnjavanje','Berba','Korov i malč','Mreža protiv ptica','Ostalo'];
+const DEFAULT_PLAN=[{md:'02-15',type:'Pruning',desc:'Winter pruning, removing old and broken branches'},
+  {md:'03-10',type:'Fertilising',desc:'Basic spring fertilising'},
+  {md:'04-01',type:'Weeds and mulch',desc:'Weed control and mulch top-up'},
+  {md:'04-25',type:'Bird netting',desc:'Install netting before ripening'},
+  {md:'05-20',type:'Harvest',desc:'Start ripeness checks and harvest'},
+  {md:'06-15',type:'Fertilising',desc:'Fertilising after harvest'},
+  {md:'07-01',type:'Irrigation',desc:'Summer irrigation check'},
+  {md:'10-15',type:'Fertilising',desc:'Autumn fertilising and winter prep'}];
+const TK_TYPES=['Pruning','Fertilising','Protection','Irrigation','Harvest','Weeds and mulch','Bird netting','Other'];
 function planTemplate(){
   if(!store.planTemplate||!store.planTemplate.length)store.planTemplate=DEFAULT_PLAN.map(p=>({md:p.md,type:p.type,desc:p.desc}));
   return store.planTemplate;
 }
 $('tk-plan').onclick=()=>{
-  if(atLimit('tasks','Poslovi'))return;
+  if(atLimit('tasks','Tasks'))return;
   const y=curYear;
   if(store.tasks.some(t=>t.kind==='plan'&&(t.date||'').startsWith(y))){
-    if(!confirm('Za '+y+'. već postoji godišnji plan. Dodati šablon ipak?'))return;
+    if(!confirm('For '+y+'. an annual plan already exists. Insert the template anyway?'))return;
   }
-  planTemplate().forEach(p=>store.tasks.push({id:uid(),date:y+'-'+p.md,type:p.type,kind:'plan',scope:'Ceo voćnjak',desc:p.desc,done:false,notes:[]}));
+  planTemplate().forEach(p=>store.tasks.push({id:uid(),date:y+'-'+p.md,type:p.type,kind:'plan',scope:'Whole orchard',desc:p.desc,done:false,notes:[]}));
   save();renderTasks();
 };
 $('tk-plan-edit').onclick=()=>openPlanEditor();
@@ -1390,16 +1390,16 @@ function openPlanEditor(){
     const typeOpts=TK_TYPES.map(o=>'<option'+(p.type===o?' selected':'')+'>'+o+'</option>').join('');
     return '<div class="tplrow"><input type="date" id="tpl-d-'+i+'" value="'+curYear+'-'+esc(p.md)+'">'+
       '<select id="tpl-t-'+i+'">'+typeOpts+'</select>'+
-      '<input id="tpl-x-'+i+'" value="'+esc(p.desc||'')+'" placeholder="opis">'+
-      '<button class="btn danger small" onclick="delTplRow('+i+')">Obriši</button></div>';
+      '<input id="tpl-x-'+i+'" value="'+esc(p.desc||'')+'" placeholder="description">'+
+      '<button class="btn danger small" onclick="delTplRow('+i+')">Delete</button></div>';
   }).join('');
-  openModal('<h3>Šablon godišnjih poslova</h3><div class="sub">Ove stavke se ubacuju kad klikneš na dugme Ubaci šablon godišnjih poslova. Godina se uzima iz izbora gore, menja se samo dan i mesec.</div>'+
-    '<div class="tplhead"><span>Datum</span><span>Vrsta</span><span>Opis</span><span></span></div>'+
-    '<div id="tpl-rows">'+(rows||'<p class="muted">Šablon je prazan.</p>')+'</div>'+
-    '<div class="formrow" style="margin-top:12px"><button class="btn sec" onclick="addTplRow()">Dodaj stavku</button>'+
-    '<button class="btn sec" onclick="resetTpl()">Vrati podrazumevano</button></div>'+
-    '<div class="formrow"><button class="btn" onclick="savePlanTpl()">Sačuvaj šablon</button>'+
-    '<button class="btn sec" onclick="closeModal()">Otkaži</button></div>');
+  openModal('<h3>Annual task template</h3><div class="sub">These items are inserted when you click the Insert annual task template button. The year is taken from the selector above, only the day and month change.</div>'+
+    '<div class="tplhead"><span>Date</span><span>Type</span><span>Opis</span><span></span></div>'+
+    '<div id="tpl-rows">'+(rows||'<p class="muted">The template is empty.</p>')+'</div>'+
+    '<div class="formrow" style="margin-top:12px"><button class="btn sec" onclick="addTplRow()">Add item</button>'+
+    '<button class="btn sec" onclick="resetTpl()">Restore default</button></div>'+
+    '<div class="formrow"><button class="btn" onclick="savePlanTpl()">Save template</button>'+
+    '<button class="btn sec" onclick="closeModal()">Cancel</button></div>');
 }
 function readTplFromForm(){
   const out=[];
@@ -1411,14 +1411,14 @@ function readTplFromForm(){
   });
   return out;
 }
-function addTplRow(){store.planTemplate=readTplFromForm();store.planTemplate.push({md:'01-15',type:'Ostalo',desc:''});openPlanEditor();}
+function addTplRow(){store.planTemplate=readTplFromForm();store.planTemplate.push({md:'01-15',type:'Other',desc:''});openPlanEditor();}
 function delTplRow(i){const t=readTplFromForm();t.splice(i,1);store.planTemplate=t;openPlanEditor();}
-function resetTpl(){if(!confirm('Vratiti podrazumevani šablon?'))return;store.planTemplate=DEFAULT_PLAN.map(p=>({md:p.md,type:p.type,desc:p.desc}));save();openPlanEditor();}
+function resetTpl(){if(!confirm('Restore the default template?'))return;store.planTemplate=DEFAULT_PLAN.map(p=>({md:p.md,type:p.type,desc:p.desc}));save();openPlanEditor();}
 function savePlanTpl(){
   const t=readTplFromForm();
-  if(!t.length){alert('Šablon mora imati bar jednu stavku.');return;}
+  if(!t.length){alert('The template must have at least one item.');return;}
   t.sort((a,b)=>a.md<b.md?-1:1);
-  store.planTemplate=t;save();closeModal();alert('Šablon je sačuvan.');
+  store.planTemplate=t;save();closeModal();alert('Template saved.');
 }
 function taskRow(t,done){
   const notes=(t.notes||[]).map(n=>'<div class="tasknote"><span class="nd">'+fmtD(n.d)+'</span> '+esc(n.t)+'</div>').join('');
@@ -1428,9 +1428,9 @@ function taskRow(t,done){
     : '<td style="white-space:nowrap"><input type="date" value="'+esc(t.date)+'" onchange="editTaskDate(\''+t.id+'\',this.value)" class="dinput"></td>';
   tr.innerHTML=dateCell+'<td>'+esc(t.type)+'</td><td>'+esc(t.scope)+'</td>'+
     '<td>'+esc(t.desc||'')+notes+'</td>'+
-    '<td style="white-space:nowrap">'+(t.done?'<button class="btn sec small" onclick="undoTask(\''+t.id+'\')">Vrati</button> ':'<button class="btn small" onclick="doneTask(\''+t.id+'\')">Obavljeno</button> ')+
-    '<button class="btn sec small" onclick="taskNote(\''+t.id+'\')">Beleška</button> '+
-    '<button class="btn danger small" onclick="delTask(\''+t.id+'\')">Obriši</button></td>';
+    '<td style="white-space:nowrap">'+(t.done?'<button class="btn sec small" onclick="undoTask(\''+t.id+'\')">Undo</button> ':'<button class="btn small" onclick="doneTask(\''+t.id+'\')">Done</button> ')+
+    '<button class="btn sec small" onclick="taskNote(\''+t.id+'\')">Note</button> '+
+    '<button class="btn danger small" onclick="delTask(\''+t.id+'\')">Delete</button></td>';
   return tr;
 }
 function fillTaskTable(sel,list,done,emptyMsg){
@@ -1447,26 +1447,26 @@ function renderTasks(){
   const pd=plan.filter(t=>t.done).sort((a,b)=>(a.doneDate||a.date)<(b.doneDate||b.date)?1:-1);
   const ao=adhoc.filter(t=>!t.done).sort((a,b)=>a.date<b.date?-1:1);
   const ad=adhoc.filter(t=>t.done).sort((a,b)=>(a.doneDate||a.date)<(b.doneDate||b.date)?1:-1);
-  fillTaskTable('#tk-plan-t',po,false,'Nema predstojećih poslova iz plana za '+curYear+'. Ubaci šablon pa ga prilagodi, ili dodaj stavke ručno.');
-  fillTaskTable('#tk-plan-done-t',pd,true,'Nema obavljenih poslova iz plana za '+curYear+'.');
-  fillTaskTable('#tk-adhoc-t',ao,false,'Nema predstojećih vanrednih poslova u '+curYear+'.');
-  fillTaskTable('#tk-adhoc-done-t',ad,true,'Nema obavljenih vanrednih poslova u '+curYear+'.');
+  fillTaskTable('#tk-plan-t',po,false,'No upcoming plan tasks for '+curYear+'. Insert the template and adjust it, or add items manually.');
+  fillTaskTable('#tk-plan-done-t',pd,true,'No completed plan tasks for '+curYear+'.');
+  fillTaskTable('#tk-adhoc-t',ao,false,'No upcoming ad-hoc tasks in '+curYear+'.');
+  fillTaskTable('#tk-adhoc-done-t',ad,true,'No completed ad-hoc tasks in '+curYear+'.');
   setCnt('cnt-plan-open',po.length);setCnt('cnt-plan-done',pd.length);
   setCnt('cnt-adhoc-open',ao.length);setCnt('cnt-adhoc-done',ad.length);
 }
 function setCnt(id,n){const e=$(id);if(e)e.textContent=n;}
 function toggleAcc(id){const a=$(id);if(a)a.classList.toggle('open');}
-function doneTask(id){const t=store.tasks.find(x=>x.id===id);if(t){t.done=true;t.doneDate=todayStr();save();renderTasks();if(typeof renderPregled==='function')renderPregled();}}
-function undoTask(id){const t=store.tasks.find(x=>x.id===id);if(t){t.done=false;delete t.doneDate;save();renderTasks();if(typeof renderPregled==='function')renderPregled();}}
-function delTask(id){if(!confirm('Obrisati ovaj posao?'))return;store.tasks=store.tasks.filter(x=>x.id!==id);save();renderTasks();if(typeof renderPregled==='function')renderPregled();}
+function doneTask(id){const t=store.tasks.find(x=>x.id===id);if(t){t.done=true;t.doneDate=todayStr();save();renderTasks();if(typeof renderOverview==='function')renderOverview();}}
+function undoTask(id){const t=store.tasks.find(x=>x.id===id);if(t){t.done=false;delete t.doneDate;save();renderTasks();if(typeof renderOverview==='function')renderOverview();}}
+function delTask(id){if(!confirm('Delete this task?'))return;store.tasks=store.tasks.filter(x=>x.id!==id);save();renderTasks();if(typeof renderOverview==='function')renderOverview();}
 function editTaskDate(id,val){const t=store.tasks.find(x=>x.id===id);if(!t||!val)return;t.date=val;
-  addYear(val.slice(0,4));save();renderGlobalYear();renderTasks();if(typeof renderPregled==='function')renderPregled();}
+  addYear(val.slice(0,4));save();renderGlobalYear();renderTasks();if(typeof renderOverview==='function')renderOverview();}
 function taskNote(id){
   const t=store.tasks.find(x=>x.id===id);if(!t)return;
-  openModal('<h3>Beleška uz posao</h3><div class="sub">'+fmtD(t.date)+', '+esc(t.type)+', '+esc(t.scope)+'</div>'+
-    '<div class="fld"><label>Beleška</label><textarea id="tn-t" rows="4" style="width:100%"></textarea></div>'+
-    '<div class="formrow" style="margin-top:12px"><button class="btn" style="flex:1;padding:13px" onclick="saveTaskNote(\''+id+'\')">Sačuvaj</button>'+
-    '<button class="btn sec" onclick="closeModal()">Otkaži</button></div>');
+  openModal('<h3>Note on task</h3><div class="sub">'+fmtD(t.date)+', '+esc(t.type)+', '+esc(t.scope)+'</div>'+
+    '<div class="fld"><label>Note</label><textarea id="tn-t" rows="4" style="width:100%"></textarea></div>'+
+    '<div class="formrow" style="margin-top:12px"><button class="btn" style="flex:1;padding:13px" onclick="saveTaskNote(\''+id+'\')">Save</button>'+
+    '<button class="btn sec" onclick="closeModal()">Cancel</button></div>');
   setTimeout(()=>{const e=$('tn-t');if(e)e.focus();},50);
 }
 function saveTaskNote(id){
@@ -1480,7 +1480,7 @@ function saveTaskNote(id){
 let hvPickedRows=new Set();
 (function(){
   $('hv-date').value=todayStr();
-  const rs=['Ceo voćnjak','Izbor redova'];for(let i=1;i<=DATA.length;i++)rs.push('R'+i);
+  const rs=['Whole orchard','Select rows'];for(let i=1;i<=DATA.length;i++)rs.push('R'+i);
   $('hv-row').innerHTML=rs.map(o=>'<option>'+o+'</option>').join('');
   $('hv-var').innerHTML=Object.keys(totals).map(v=>'<option value="'+esc(v)+'">'+esc(META[v].disp)+'</option>').join('');
   const hp=$('hv-rows');
@@ -1491,18 +1491,18 @@ let hvPickedRows=new Set();
   }
   $('hv-row').onchange=()=>{
     const r=$('hv-row').value;
-    $('hv-rows').style.display=(r==='Izbor redova')?'flex':'none';
-    if(r!=='Ceo voćnjak'&&r!=='Izbor redova'){const i=+r.slice(1)-1;$('hv-var').value=primaryOf(DATA[i]);}
+    $('hv-rows').style.display=(r==='Select rows')?'flex':'none';
+    if(r!=='Whole orchard'&&r!=='Select rows'){const i=+r.slice(1)-1;$('hv-var').value=primaryOf(DATA[i]);}
   };
 })();
 $('hv-add').onclick=()=>{
-  if(atLimit('harvest','Berba'))return;
+  if(atLimit('harvest','Harvest'))return;
   const kg=parseFloat($('hv-kg').value);
-  if(!$('hv-date').value||!kg){alert('Unesi datum i kilograme.');return;}
+  if(!$('hv-date').value||!kg){alert('Enter date and kilograms.');return;}
   let row=$('hv-row').value;
-  if(row==='Izbor redova'){
-    if(!hvPickedRows.size){alert('Označi bar jedan red.');return;}
-    row='Redovi '+[...hvPickedRows].sort((a,b)=>+a.slice(1)-+b.slice(1)).join(', ');
+  if(row==='Select rows'){
+    if(!hvPickedRows.size){alert('Select at least one row.');return;}
+    row='Rows '+[...hvPickedRows].sort((a,b)=>+a.slice(1)-+b.slice(1)).join(', ');
   }
   store.harvest.push({id:uid(),date:$('hv-date').value,row:row,variety:$('hv-var').value,kg:kg,note:$('hv-note').value.trim()});
   const hy=$('hv-date').value.slice(0,4);addYear(hy);curYear=hy;
@@ -1516,10 +1516,10 @@ function renderHarvest(){
   const tb=document.querySelector('#hv-table tbody');tb.innerHTML='';
   list.forEach(h=>{
     const tr=document.createElement('tr');
-    tr.innerHTML='<td style="white-space:nowrap">'+fmtD(h.date)+'</td><td>'+esc(h.row)+'</td><td>'+esc(META[h.variety]?META[h.variety].disp:h.variety)+'</td><td class="r">'+fmtN(h.kg)+'</td><td>'+esc(h.note||'')+'</td><td style="white-space:nowrap"><button class="btn sec small" onclick="editHv(\''+h.id+'\')">Izmeni</button> <button class="btn danger small" onclick="delHv(\''+h.id+'\')">Obriši</button></td>';
+    tr.innerHTML='<td style="white-space:nowrap">'+fmtD(h.date)+'</td><td>'+esc(h.row)+'</td><td>'+esc(META[h.variety]?META[h.variety].disp:h.variety)+'</td><td class="r">'+fmtN(h.kg)+'</td><td>'+esc(h.note||'')+'</td><td style="white-space:nowrap"><button class="btn sec small" onclick="editHv(\''+h.id+'\')">Edit</button> <button class="btn danger small" onclick="delHv(\''+h.id+'\')">Delete</button></td>';
     tb.appendChild(tr);
   });
-  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">Još nema unosa berbe za '+curYear+'.</td></tr>';
+  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">No harvest entries yet for '+curYear+'.</td></tr>';
   const byVar={};list.forEach(h=>byVar[h.variety]=(byVar[h.variety]||0)+(+h.kg||0));
   let html='';const varsK=Object.keys(byVar);
   if(varsK.length){
@@ -1528,19 +1528,19 @@ function renderHarvest(){
     let inner='';
     varsK.sort((a,b)=>byVar[b]-byVar[a]).forEach(v=>{
       const perBush=totals[v]?byVar[v]/totals[v]:0;
-      inner+='<div class="barrow"><div>'+esc(META[v]?META[v].disp:v)+'</div><div><div class="bar" style="width:'+(byVar[v]/mv*100)+'%;background:'+(META[v]?META[v].c:'var(--accent)')+'"></div></div><div class="val">'+fmtN(byVar[v])+' kg ('+fmtN(perBush)+'/žbun)</div></div>';});
-    html='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">Po sortama u '+curYear+' (ukupno '+fmtN(totalY)+' kg)</h3>'+inner+'</div>';
+      inner+='<div class="barrow"><div>'+esc(META[v]?META[v].disp:v)+'</div><div><div class="bar" style="width:'+(byVar[v]/mv*100)+'%;background:'+(META[v]?META[v].c:'var(--accent)')+'"></div></div><div class="val">'+fmtN(byVar[v])+' kg ('+fmtN(perBush)+'/bush)</div></div>';});
+    html='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">By variety in '+curYear+' (total '+fmtN(totalY)+' kg)</h3>'+inner+'</div>';
   }
   $('hv-summary').innerHTML=html;
 }
 /* ---------- finansije ---------- */
-const CATS={trosak:['Sadnice','Đubrivo','Zaštita','Rad','Oprema','Navodnjavanje','Gorivo','Ambalaža','Ostalo'],prihod:['Prodaja svežeg','Prodaja prerade','Subvencija','Ostalo']};
+const CATS={trosak:['Seedlings','Fertiliser','Protection','Labour','Equipment','Irrigation','Fuel','Packaging','Other'],prihod:['Fresh sales','Processed sales','Subsidy','Other']};
 function fillCats(){const k=$('fn-kind').value;$('fn-cat').innerHTML=CATS[k].map(c=>'<option>'+c+'</option>').join('');}
 $('fn-kind').onchange=fillCats;fillCats();$('fn-date').value=todayStr();
 $('fn-add').onclick=()=>{
-  if(atLimit('fin','Finansije'))return;
+  if(atLimit('fin','Finances'))return;
   const a=parseFloat($('fn-amt').value);
-  if(!$('fn-date').value||!a){alert('Unesi datum i iznos.');return;}
+  if(!$('fn-date').value||!a){alert('Enter date and amount.');return;}
   store.fin.push({id:uid(),date:$('fn-date').value,kind:$('fn-kind').value,cat:$('fn-cat').value,desc:$('fn-desc').value.trim(),amount:a});
   const fy=$('fn-date').value.slice(0,4);addYear(fy);curYear=fy;
   $('fn-amt').value='';$('fn-desc').value='';save();renderGlobalYear();renderFin();
@@ -1552,25 +1552,25 @@ function renderFin(){
   const tb=document.querySelector('#fn-table tbody');tb.innerHTML='';
   list.forEach(f=>{
     const tr=document.createElement('tr');
-    tr.innerHTML='<td style="white-space:nowrap">'+fmtD(f.date)+'</td><td>'+(f.kind==='trosak'?'Trošak':'Prihod')+'</td><td>'+esc(f.cat)+'</td><td>'+esc(f.desc||'')+'</td><td class="r" style="color:'+(f.kind==='trosak'?'var(--bad)':'var(--good)')+'">'+fmtN(f.amount)+' '+cur+'</td><td style="white-space:nowrap"><button class="btn sec small" onclick="editFn(\''+f.id+'\')">Izmeni</button> <button class="btn danger small" onclick="delFn(\''+f.id+'\')">Obriši</button></td>';
+    tr.innerHTML='<td style="white-space:nowrap">'+fmtD(f.date)+'</td><td>'+(f.kind==='trosak'?'Expense':'Income')+'</td><td>'+esc(f.cat)+'</td><td>'+esc(f.desc||'')+'</td><td class="r" style="color:'+(f.kind==='trosak'?'var(--bad)':'var(--good)')+'">'+fmtN(f.amount)+' '+cur+'</td><td style="white-space:nowrap"><button class="btn sec small" onclick="editFn(\''+f.id+'\')">Edit</button> <button class="btn danger small" onclick="delFn(\''+f.id+'\')">Delete</button></td>';
     tb.appendChild(tr);
   });
-  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">Još nema stavki za '+curYear+'.</td></tr>';
+  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">No items yet for '+curYear+'.</td></tr>';
   let o={t:0,p:0,cats:{}};
   list.forEach(f=>{if(f.kind==='trosak'){o.t+=f.amount;o.cats[f.cat]=(o.cats[f.cat]||0)+f.amount;}else o.p+=f.amount;});
   const bal=o.p-o.t;
   const kg=store.harvest.filter(h=>(h.date||'').startsWith(curYear)).reduce((a,h)=>a+(+h.kg||0),0);
   let html='';
   if(list.length){
-    html+='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">Bilans za '+curYear+'</h3>';
-    html+='<div class="tablewrap"><table class="t"><tr><td>Prihodi</td><td class="r" style="color:var(--good)">'+fmtN(o.p)+' '+cur+'</td></tr>'+
-      '<tr><td>Troškovi</td><td class="r" style="color:var(--bad)">'+fmtN(o.t)+' '+cur+'</td></tr>'+
-      '<tr><td><strong>Bilans</strong></td><td class="r"><strong>'+fmtN(bal)+' '+cur+'</strong></td></tr>'+
-      (kg&&o.t?'<tr><td>Trošak po kg berbe</td><td class="r">'+fmtN(o.t/kg)+' '+cur+'</td></tr>':'')+
+    html+='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">Balance for '+curYear+'</h3>';
+    html+='<div class="tablewrap"><table class="t"><tr><td>Income</td><td class="r" style="color:var(--good)">'+fmtN(o.p)+' '+cur+'</td></tr>'+
+      '<tr><td>Expenses</td><td class="r" style="color:var(--bad)">'+fmtN(o.t)+' '+cur+'</td></tr>'+
+      '<tr><td><strong>Balance</strong></td><td class="r"><strong>'+fmtN(bal)+' '+cur+'</strong></td></tr>'+
+      (kg&&o.t?'<tr><td>Cost per kg harvested</td><td class="r">'+fmtN(o.t/kg)+' '+cur+'</td></tr>':'')+
       '</table></div></div>';
     const cats=Object.keys(o.cats);
     if(cats.length){const mx=Math.max(...Object.values(o.cats));
-      html+='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">Troškovi po kategoriji</h3>';
+      html+='<div class="panelbox"><h3 class="rp-title" style="margin-top:0">Expenses by category</h3>';
       cats.sort((a,b)=>o.cats[b]-o.cats[a]).forEach(c=>{
         const pct=o.t?(o.cats[c]/o.t*100):0;
         html+='<div class="barrow"><div>'+esc(c)+'</div><div><div class="bar" style="width:'+(o.cats[c]/mx*100)+'%"></div></div><div class="val">'+fmtN(o.cats[c])+' '+cur+' <span class="pct">'+pct.toFixed(1)+'%</span></div></div>';});
@@ -1578,27 +1578,27 @@ function renderFin(){
   }
   $('fn-summary').innerHTML=html;
 }
-/* ---------- izmena unosa berbe i finansija ---------- */
+/* ---------- izmena entries berbe i finansija ---------- */
 function editHv(id){
   const h=store.harvest.find(x=>x.id===id);if(!h)return;
   const varOpts=Object.keys(totals).map(v=>'<option value="'+esc(v)+'"'+(v===h.variety?' selected':'')+'>'+esc(META[v].disp)+'</option>').join('');
-  const std=['Ceo voćnjak'];for(let i=1;i<=DATA.length;i++)std.push('R'+i);
+  const std=['Whole orchard'];for(let i=1;i<=DATA.length;i++)std.push('R'+i);
   let rowOpts='';if(!std.includes(h.row))rowOpts+='<option value="'+esc(h.row)+'" selected>'+esc(h.row)+'</option>';
   rowOpts+=std.map(o=>'<option'+(o===h.row?' selected':'')+'>'+esc(o)+'</option>').join('');
   openModal(
-    '<h3>Izmena unosa berbe</h3><div class="sub">Uneseno '+fmtD(h.date)+'</div>'+
-    '<div class="formrow"><div class="fld"><label>Datum</label><input type="date" id="eh-date" value="'+esc(h.date)+'"></div>'+
-    '<div class="fld" style="flex:1;min-width:150px"><label>Obuhvat</label><select id="eh-row">'+rowOpts+'</select></div></div>'+
-    '<div class="formrow"><div class="fld"><label>Sorta</label><select id="eh-var">'+varOpts+'</select></div>'+
-    '<div class="fld"><label>Kilograma</label><input type="number" id="eh-kg" min="0" step="0.1" value="'+esc(h.kg)+'"></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1;min-width:180px"><label>Napomena</label><input id="eh-note" value="'+esc(h.note||'')+'"></div></div>'+
-    '<div class="formrow" style="margin-top:6px"><button class="btn" onclick="saveHvEdit(\''+id+'\')">Sačuvaj izmene</button>'+
-    '<button class="btn sec" onclick="closeModal()">Otkaži</button></div>');
+    '<h3>Edit harvest entry</h3><div class="sub">Entered '+fmtD(h.date)+'</div>'+
+    '<div class="formrow"><div class="fld"><label>Date</label><input type="date" id="eh-date" value="'+esc(h.date)+'"></div>'+
+    '<div class="fld" style="flex:1;min-width:150px"><label>Scope</label><select id="eh-row">'+rowOpts+'</select></div></div>'+
+    '<div class="formrow"><div class="fld"><label>Variety</label><select id="eh-var">'+varOpts+'</select></div>'+
+    '<div class="fld"><label>Kilograms</label><input type="number" id="eh-kg" min="0" step="0.1" value="'+esc(h.kg)+'"></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1;min-width:180px"><label>Note</label><input id="eh-note" value="'+esc(h.note||'')+'"></div></div>'+
+    '<div class="formrow" style="margin-top:6px"><button class="btn" onclick="saveHvEdit(\''+id+'\')">Save changes</button>'+
+    '<button class="btn sec" onclick="closeModal()">Cancel</button></div>');
 }
 function saveHvEdit(id){
   const h=store.harvest.find(x=>x.id===id);if(!h)return;
   const kg=parseFloat($('eh-kg').value),d=$('eh-date').value;
-  if(!d||!kg){alert('Unesi datum i kilograme.');return;}
+  if(!d||!kg){alert('Enter date and kilograms.');return;}
   h.date=d;h.row=$('eh-row').value;h.variety=$('eh-var').value;h.kg=kg;h.note=$('eh-note').value.trim();
   save();renderHarvest();closeModal();
 }
@@ -1611,20 +1611,20 @@ function efCats(sel){
 function editFn(id){
   const f=store.fin.find(x=>x.id===id);if(!f)return;
   openModal(
-    '<h3>Izmena stavke</h3><div class="sub">Uneseno '+fmtD(f.date)+'</div>'+
-    '<div class="formrow"><div class="fld"><label>Datum</label><input type="date" id="ef-date" value="'+esc(f.date)+'"></div>'+
-    '<div class="fld"><label>Tip</label><select id="ef-kind" onchange="efCats()"><option value="trosak"'+(f.kind==='trosak'?' selected':'')+'>Trošak</option><option value="prihod"'+(f.kind==='prihod'?' selected':'')+'>Prihod</option></select></div>'+
-    '<div class="fld"><label>Kategorija</label><select id="ef-cat"></select></div></div>'+
-    '<div class="formrow"><div class="fld"><label>Iznos</label><input type="number" id="ef-amt" min="0" step="1" value="'+esc(f.amount)+'"></div>'+
+    '<h3>Edit item</h3><div class="sub">Entered '+fmtD(f.date)+'</div>'+
+    '<div class="formrow"><div class="fld"><label>Date</label><input type="date" id="ef-date" value="'+esc(f.date)+'"></div>'+
+    '<div class="fld"><label>Tip</label><select id="ef-kind" onchange="efCats()"><option value="trosak"'+(f.kind==='trosak'?' selected':'')+'>Expense</option><option value="prihod"'+(f.kind==='prihod'?' selected':'')+'>Income</option></select></div>'+
+    '<div class="fld"><label>Category</label><select id="ef-cat"></select></div></div>'+
+    '<div class="formrow"><div class="fld"><label>Amount</label><input type="number" id="ef-amt" min="0" step="1" value="'+esc(f.amount)+'"></div>'+
     '<div class="fld" style="flex:1;min-width:180px"><label>Opis</label><input id="ef-desc" value="'+esc(f.desc||'')+'"></div></div>'+
-    '<div class="formrow" style="margin-top:6px"><button class="btn" onclick="saveFnEdit(\''+id+'\')">Sačuvaj izmene</button>'+
-    '<button class="btn sec" onclick="closeModal()">Otkaži</button></div>');
+    '<div class="formrow" style="margin-top:6px"><button class="btn" onclick="saveFnEdit(\''+id+'\')">Save changes</button>'+
+    '<button class="btn sec" onclick="closeModal()">Cancel</button></div>');
   efCats(f.cat);
 }
 function saveFnEdit(id){
   const f=store.fin.find(x=>x.id===id);if(!f)return;
   const a=parseFloat($('ef-amt').value),d=$('ef-date').value;
-  if(!d||!a){alert('Unesi datum i iznos.');return;}
+  if(!d||!a){alert('Enter date and amount.');return;}
   f.date=d;f.kind=$('ef-kind').value;f.cat=$('ef-cat').value;f.amount=a;f.desc=$('ef-desc').value.trim();
   save();renderFin();closeModal();
 }
@@ -1671,7 +1671,7 @@ function updateActionUI(){
   const badge=document.getElementById('pg-badge');
   if(badge){badge.textContent=n?String(n):'';badge.style.display=n?'inline-flex':'none';}
   const t=document.getElementById('btn-actiononly');
-  if(t){t.textContent=n?('Samo za akciju ('+n+')'):'Samo za akciju';}
+  if(t){t.textContent=n?('Action only ('+n+')'):'Action only';}
 }
 function goToBush(id){
   const mb=document.querySelector('#tabs button[data-t="mapa"]');if(mb)mb.click();
@@ -1680,13 +1680,13 @@ function goToBush(id){
     if(b){b.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});b.classList.remove('flash');void b.offsetWidth;b.classList.add('flash');}
   },70);
 }
-function pgDone(id){if(typeof doneTask==='function')doneTask(id);renderPregled();}
+function pgDone(id){if(typeof doneTask==='function')doneTask(id);renderOverview();}
 
 let pgWxLoaded=false, pgTasksOpen=false, pgActionsOpen=false;
-function loadPregledWeather(){
+function loadOverviewWeather(){
   const g=document.getElementById('pg-wx');if(!g)return;
   const s=store.settings;
-  g.innerHTML='<p class="muted">Učitavam prognozu...</p>';
+  g.innerHTML='<p class="muted">Loading forecast...</p>';
   const url='https://api.open-meteo.com/v1/forecast?latitude='+s.lat+'&longitude='+s.lon+'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max&timezone=auto&forecast_days=5';
   fetch(url).then(r=>r.json()).then(d=>{
     g.innerHTML='';
@@ -1694,21 +1694,21 @@ function loadPregledWeather(){
       const code=d.daily.weather_code[i],w=WMO[code]||['',''];
       const tmin=d.daily.temperature_2m_min[i],tmax=d.daily.temperature_2m_max[i];
       const rain=d.daily.precipitation_sum[i],prob=d.daily.precipitation_probability_max[i],wind=d.daily.wind_speed_10m_max[i];
-      const dt=new Date(day),dname=['Ned','Pon','Uto','Sre','Čet','Pet','Sub'][dt.getDay()];
+      const dt=new Date(day),dname=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dt.getDay()];
       let flags='';
-      if(tmin<=0)flags+='<span class="wxflag frost">Mogući mraz</span> ';
-      if(wind<=15&&prob<=30)flags+='<span class="wxflag spray">Povoljno za tretman</span> ';
-      if(rain>=5)flags+='<span class="wxflag rain">Obilna kiša</span>';
+      if(tmin<=0)flags+='<span class="wxflag frost">Possible frost</span> ';
+      if(wind<=15&&prob<=30)flags+='<span class="wxflag spray">Good for spraying</span> ';
+      if(rain>=5)flags+='<span class="wxflag rain">Heavy rain</span>';
       const c=document.createElement('div');c.className='wxcard';
-      c.innerHTML='<div class="d">'+dname+' '+day.slice(8,10)+'.'+day.slice(5,7)+'.</div><div class="ico">'+w[1]+'</div><div class="tt">'+Math.round(tmax)+'° / '+Math.round(tmin)+'°</div><div class="sub">'+w[0]+'</div><div class="sub">kiša '+fmtN(rain)+' mm ('+(prob==null?0:prob)+'%), vetar '+Math.round(wind)+' km/h</div>'+flags;
+      c.innerHTML='<div class="d">'+dname+' '+day.slice(8,10)+'.'+day.slice(5,7)+'.</div><div class="ico">'+w[1]+'</div><div class="tt">'+Math.round(tmax)+'° / '+Math.round(tmin)+'°</div><div class="sub">'+w[0]+'</div><div class="sub">rain '+fmtN(rain)+' mm ('+(prob==null?0:prob)+'%), wind '+Math.round(wind)+' km/h</div>'+flags;
       g.appendChild(c);
     });
     pgWxLoaded=true;
   }).catch(()=>{
-    g.innerHTML='<p class="muted">Prognoza trenutno nije dostupna. Proveri internet vezu, sve ostalo radi normalno.</p>';
+    g.innerHTML='<p class="muted">The forecast is currently unavailable. Check your internet connection, everything else works normally.</p>';
   });
 }
-function renderPregled(){
+function renderOverview(){
   updateActionUI();
   const box=document.getElementById('pg-tasks');
   if(box){
@@ -1717,17 +1717,17 @@ function renderPregled(){
     const late=open.filter(t=>t.date<t0);
     const soon=open.filter(t=>t.date>=t0);
     const all=late.concat(soon);
-    if(!all.length){box.innerHTML='<p class="muted">Nema poslova na redu. Dodaj plan u tabu Poslovi.</p>';}
+    if(!all.length){box.innerHTML='<p class="muted">No tasks due. Add a plan in the Tasks tab.</p>';}
     else{
       const list=pgTasksOpen?all:all.slice(0,5);
       let h=list.map(t=>{
         const isLate=t.date<t0;
-        const pill='<span class="pill">Planirano</span>';
+        const pill='<span class="pill">Planned</span>';
         return '<div class="pgitem'+(isLate?' late':'')+'"><div class="pgi-main"><div class="pgi-top"><span class="pgi-date">'+fmtD(t.date)+'</span> '+pill+'</div>'+
           '<div class="pgi-title">'+esc(t.type)+'</div><div class="muted" style="font-size:12px">'+esc(t.scope)+(t.desc?' · '+esc(t.desc):'')+'</div></div>'+
-          '<div class="pgi-side"><button class="btn small" onclick="pgDone(\''+t.id+'\')">Obavljeno</button></div></div>';
+          '<div class="pgi-side"><button class="btn small" onclick="pgDone(\''+t.id+'\')">Done</button></div></div>';
       }).join('');
-      if(all.length>5)h+='<button class="moretgl'+(pgTasksOpen?' open':'')+'" onclick="pgMore(\'tasks\')"><span>'+(pgTasksOpen?'Prikaži manje':'Prikaži još ('+(all.length-5)+')')+'</span><span class="mt-arrow">▾</span></button>';
+      if(all.length>5)h+='<button class="moretgl'+(pgTasksOpen?' open':'')+'" onclick="pgMore(\'tasks\')"><span>'+(pgTasksOpen?'Show less':'Show more ('+(all.length-5)+')')+'</span><span class="mt-arrow">▾</span></button>';
       box.innerHTML=h;
     }
   }
@@ -1736,24 +1736,24 @@ function renderPregled(){
     const all=actionBushes();
     const head=document.getElementById('pg-actions-count');
     if(head)head.textContent=all.length?('('+all.length+')'):'';
-    if(!all.length){abox.innerHTML='<p class="muted">Nijedan žbun nije obeležen za akciju. U mapi otvori žbun ili uključi teren mod pa ga označi.</p>';}
+    if(!all.length){abox.innerHTML='<p class="muted">No bush is flagged for action. Open a bush on the map or turn on field mode and flag it.</p>';}
     else{
       const list=pgActionsOpen?all:all.slice(0,5);
       let h=list.map(a=>{
         const sortDisp=a.variety&&META[a.variety]?META[a.variety].disp:'';
         return '<div class="pgitem action"><div class="pgi-main"><div class="pgi-top"><span class="pgi-date">'+esc(a.id)+'</span> <span class="pill act">'+esc(a.cat)+'</span></div>'+
           '<div class="muted" style="font-size:12px">'+esc(sortDisp)+(a.reason?' · '+esc(a.reason):'')+'</div></div>'+
-          '<div class="pgi-side"><button class="btn sec small" onclick="goToBush(\''+a.id+'\')">Prikaži na mapi</button> <button class="btn danger small" onclick="resolveAction(\''+a.id+'\')">Reši</button></div></div>';
+          '<div class="pgi-side"><button class="btn sec small" onclick="goToBush(\''+a.id+'\')">Show on map</button> <button class="btn danger small" onclick="resolveAction(\''+a.id+'\')">Resolve</button></div></div>';
       }).join('');
-      if(all.length>5)h+='<button class="moretgl'+(pgActionsOpen?' open':'')+'" onclick="pgMore(\'actions\')"><span>'+(pgActionsOpen?'Prikaži manje':'Prikaži još ('+(all.length-5)+')')+'</span><span class="mt-arrow">▾</span></button>';
+      if(all.length>5)h+='<button class="moretgl'+(pgActionsOpen?' open':'')+'" onclick="pgMore(\'actions\')"><span>'+(pgActionsOpen?'Show less':'Show more ('+(all.length-5)+')')+'</span><span class="mt-arrow">▾</span></button>';
       abox.innerHTML=h;
     }
   }
-  if(!pgWxLoaded)loadPregledWeather();
+  if(!pgWxLoaded)loadOverviewWeather();
 }
 function pgMore(which){
   if(which==='tasks')pgTasksOpen=!pgTasksOpen;else pgActionsOpen=!pgActionsOpen;
-  renderPregled();
+  renderOverview();
 }
 /* ---------- izveštaji ---------- */
 function reportYears(){
@@ -1781,76 +1781,76 @@ function genReport(){
   const actionCount=Object.values(store.bushes).filter(b=>b&&b.action).length;
   const notesY=[];Object.entries(store.bushes).forEach(([id,b])=>(b.notes||[]).forEach(n=>{if((n.d||'').startsWith(y))notesY.push({id,d:n.d,t:n.t});}));
 
-  let h='<div class="panelbox report report-head"><div class="rp-head-row"><div><h3 style="margin:0">Godišnji izveštaj, sezona '+y+'</h3><p class="muted" style="margin:6px 0 0">'+esc(store.settings.loc)+', sastavljeno '+new Date().toLocaleDateString('sr-RS')+'</p></div>'+
-    '<div class="rp-actions"><button class="btn sec small" onclick="window.print()">Štampaj / PDF</button><button class="btn small" onclick="closeReport()">Zatvori izveštaj</button></div></div>'+
+  let h='<div class="panelbox report report-head"><div class="rp-head-row"><div><h3 style="margin:0">Annual report, season '+y+'</h3><p class="muted" style="margin:6px 0 0">'+esc(store.settings.loc)+', compiled '+new Date().toLocaleDateString('en-US')+'</p></div>'+
+    '<div class="rp-actions"><button class="btn sec small" onclick="window.print()">Print / PDF</button><button class="btn small" onclick="closeReport()">Close report</button></div></div>'+
     '<div class="kpis" style="margin-top:14px">'+
-    '<div class="kpi"><div class="n">'+fmtN(kg)+' kg</div><div class="l">ukupna berba</div></div>'+
-    '<div class="kpi"><div class="n">'+tkDone+' / '+tk.length+'</div><div class="l">obavljeni poslovi</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(pr-tr)+' '+cur+'</div><div class="l">bilans sezone</div></div>'+
-    '<div class="kpi"><div class="n">'+actionCount+'</div><div class="l">žbunova za akciju</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(kg)+' kg</div><div class="l">total harvest</div></div>'+
+    '<div class="kpi"><div class="n">'+tkDone+' / '+tk.length+'</div><div class="l">completed tasks</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(pr-tr)+' '+cur+'</div><div class="l">season balance</div></div>'+
+    '<div class="kpi"><div class="n">'+actionCount+'</div><div class="l">bushes for action</div></div>'+
     '</div></div>';
 
-  h+='<div class="panelbox rp-card"><h3 class="rp-title">Berba</h3>';
+  h+='<div class="panelbox rp-card"><h3 class="rp-title">Harvest</h3>';
   if(hv.length){
-    h+='<div class="tablewrap"><table class="t"><tr><th>Sorta</th><th class="r">kg</th><th class="r">kg po žbunu</th></tr>';
+    h+='<div class="tablewrap"><table class="t"><tr><th>Variety</th><th class="r">kg</th><th class="r">kg per bush</th></tr>';
     Object.keys(byVar).sort((a,b)=>byVar[b]-byVar[a]).forEach(v=>{
       h+='<tr><td>'+esc(META[v]?META[v].full:v)+'</td><td class="r">'+fmtN(byVar[v])+'</td><td class="r">'+fmtN(totals[v]?byVar[v]/totals[v]:0)+'</td></tr>';});
-    h+='<tr><td><strong>Ukupno</strong></td><td class="r"><strong>'+fmtN(kg)+'</strong></td><td></td></tr></table></div>';
-    h+='<p class="muted">Period berbe: '+fmtD(dates[0])+' do '+fmtD(dates[dates.length-1])+', '+hv.length+' unosa.</p>';
-  }else h+='<p class="muted">Nema unosa berbe za '+y+'.</p>';
+    h+='<tr><td><strong>Total</strong></td><td class="r"><strong>'+fmtN(kg)+'</strong></td><td></td></tr></table></div>';
+    h+='<p class="muted">Harvest period: '+fmtD(dates[0])+' to '+fmtD(dates[dates.length-1])+', '+hv.length+' entries.</p>';
+  }else h+='<p class="muted">No harvest entries for '+y+'.</p>';
   h+='</div>';
 
-  h+='<div class="panelbox rp-card"><h3 class="rp-title">Finansije</h3>';
+  h+='<div class="panelbox rp-card"><h3 class="rp-title">Finances</h3>';
   if(fin.length){
     h+='<div class="tablewrap"><table class="t">'+
-      '<tr><td>Prihodi</td><td class="r" style="color:var(--good)">'+fmtN(pr)+' '+cur+'</td></tr>'+
-      '<tr><td>Troškovi</td><td class="r" style="color:var(--bad)">'+fmtN(tr)+' '+cur+'</td></tr>'+
-      '<tr><td><strong>Bilans</strong></td><td class="r"><strong>'+fmtN(pr-tr)+' '+cur+'</strong></td></tr>'+
-      (kg&&tr?'<tr><td>Trošak po kg berbe</td><td class="r">'+fmtN(tr/kg)+' '+cur+'</td></tr>':'')+
-      (kg&&pr?'<tr><td>Prihod po kg berbe</td><td class="r">'+fmtN(pr/kg)+' '+cur+'</td></tr>':'')+
+      '<tr><td>Income</td><td class="r" style="color:var(--good)">'+fmtN(pr)+' '+cur+'</td></tr>'+
+      '<tr><td>Expenses</td><td class="r" style="color:var(--bad)">'+fmtN(tr)+' '+cur+'</td></tr>'+
+      '<tr><td><strong>Balance</strong></td><td class="r"><strong>'+fmtN(pr-tr)+' '+cur+'</strong></td></tr>'+
+      (kg&&tr?'<tr><td>Cost per kg harvested</td><td class="r">'+fmtN(tr/kg)+' '+cur+'</td></tr>':'')+
+      (kg&&pr?'<tr><td>Revenue per kg harvested</td><td class="r">'+fmtN(pr/kg)+' '+cur+'</td></tr>':'')+
       '</table></div>';
-  }else h+='<p class="muted">Nema finansijskih stavki za '+y+'.</p>';
+  }else h+='<p class="muted">No financial items for '+y+'.</p>';
   h+='</div>';
 
   if(notesY.length){
-    h+='<div class="panelbox rp-card"><h3 class="rp-title">Beleške sa terena u '+y+'</h3><div class="tablewrap"><table class="t"><tr><th>Datum</th><th>Žbun</th><th>Beleška</th></tr>';
+    h+='<div class="panelbox rp-card"><h3 class="rp-title">Field notes in '+y+'</h3><div class="tablewrap"><table class="t"><tr><th>Date</th><th>Bush</th><th>Note</th></tr>';
     notesY.sort((a,b)=>a.d<b.d?1:-1).slice(0,30).forEach(n=>{h+='<tr><td>'+fmtD(n.d)+'</td><td>'+esc(n.id)+'</td><td>'+esc(n.t)+'</td></tr>';});
-    h+='</table></div>'+(notesY.length>30?'<p class="muted">Prikazano poslednjih 30 od '+notesY.length+' beleški.</p>':'')+'</div>';
+    h+='</table></div>'+(notesY.length>30?'<p class="muted">Showing the last 30 of '+notesY.length+' notes.</p>':'')+'</div>';
   }
 
   const cust=store.customers.filter(c=>(c.date||'').startsWith(y));
-  h+='<div class="panelbox rp-card"><h3 class="rp-title">Prodaja i kupci</h3>';
+  h+='<div class="panelbox rp-card"><h3 class="rp-title">Sales and customers</h3>';
   if(cust.length){
     const cq=cust.reduce((a,c)=>a+(+c.qty||0),0),cv=cust.reduce((a,c)=>a+(+c.val||0),0);
     const dl=cust.filter(c=>c.delivered),dq=dl.reduce((a,c)=>a+(+c.qty||0),0),dv=dl.reduce((a,c)=>a+(+c.val||0),0);
     h+='<div class="tablewrap"><table class="t">'+
-      '<tr><td>Porudžbina</td><td class="r">'+cust.length+' ('+dl.length+' isporučeno)</td></tr>'+
-      '<tr><td>Naručena količina</td><td class="r">'+fmtN(cq)+' kg</td></tr>'+
-      '<tr><td>Isporučena količina</td><td class="r">'+fmtN(dq)+' kg</td></tr>'+
-      '<tr><td>Vrednost porudžbina</td><td class="r">'+fmtN(cv)+' '+cur+'</td></tr>'+
-      '<tr><td>Naplaćeno (isporučeno)</td><td class="r">'+fmtN(dv)+' '+cur+'</td></tr>'+
-      '<tr><td>Preostalo za isporuku</td><td class="r">'+fmtN(cq-dq)+' kg, '+fmtN(cv-dv)+' '+cur+'</td></tr>';
-    if(kg&&cq>kg)h+='<tr><td colspan="2" style="color:var(--warn)">Naručeno više nego što je ubrano ('+fmtN(cq)+' kg naručeno, '+fmtN(kg)+' kg berba).</td></tr>';
+      '<tr><td>Orders</td><td class="r">'+cust.length+' ('+dl.length+' delivered)</td></tr>'+
+      '<tr><td>Ordered quantity</td><td class="r">'+fmtN(cq)+' kg</td></tr>'+
+      '<tr><td>Delivered quantity</td><td class="r">'+fmtN(dq)+' kg</td></tr>'+
+      '<tr><td>Order value</td><td class="r">'+fmtN(cv)+' '+cur+'</td></tr>'+
+      '<tr><td>Collected (delivered)</td><td class="r">'+fmtN(dv)+' '+cur+'</td></tr>'+
+      '<tr><td>Left to deliver</td><td class="r">'+fmtN(cq-dq)+' kg, '+fmtN(cv-dv)+' '+cur+'</td></tr>';
+    if(kg&&cq>kg)h+='<tr><td colspan="2" style="color:var(--warn)">Ordered more than harvested ('+fmtN(cq)+' kg ordered, '+fmtN(kg)+' kg harvested).</td></tr>';
     h+='</table></div>';
-    const byChan={};cust.forEach(c=>byChan[c.chan||'Ostalo']=(byChan[c.chan||'Ostalo']||0)+(+c.val||0));
+    const byChan={};cust.forEach(c=>byChan[c.chan||'Other']=(byChan[c.chan||'Other']||0)+(+c.val||0));
     const mx=Math.max(...Object.values(byChan));
     const sumChan=Object.values(byChan).reduce((a,b)=>a+b,0);
-    h+='<h4 class="sect" style="font-size:14px">Prodaja po kanalu</h4>';
+    h+='<h4 class="sect" style="font-size:14px">Sales by channel</h4>';
     Object.keys(byChan).sort((a,b)=>byChan[b]-byChan[a]).forEach(ch=>{const pct=sumChan?(byChan[ch]/sumChan*100):0;h+='<div class="barrow"><div>'+esc(ch)+'</div><div><div class="bar" style="width:'+(byChan[ch]/mx*100)+'%"></div></div><div class="val">'+fmtN(byChan[ch])+' '+cur+' ('+pct.toFixed(1)+'%)</div></div>';});
-  }else h+='<p class="muted">Nema evidentiranih porudžbina za '+y+'.</p>';
+  }else h+='<p class="muted">No recorded orders for '+y+'.</p>';
   h+='</div>';
 
-  h+='<div class="panelbox rp-card"><h3 class="rp-title">Stanje zaliha (trenutno)</h3>';
+  h+='<div class="panelbox rp-card"><h3 class="rp-title">Stock level (current)</h3>';
   if(store.inventory.length){
     const low=store.inventory.filter(it=>it.min>0&&it.qty<=it.min);
-    h+='<div class="tablewrap"><table class="t"><tr><th>Naziv</th><th>Kategorija</th><th class="r">Stanje</th></tr>';
-    store.inventory.slice().sort((a,b)=>a.cat.localeCompare(b.cat,'sr')||a.name.localeCompare(b.name,'sr')).forEach(it=>{
+    h+='<div class="tablewrap"><table class="t"><tr><th>Name</th><th>Category</th><th class="r">Stock</th></tr>';
+    store.inventory.slice().sort((a,b)=>a.cat.localeCompare(b.cat,'en')||a.name.localeCompare(b.name,'en')).forEach(it=>{
       const lw=it.min>0&&it.qty<=it.min;
       h+='<tr><td>'+esc(it.name)+'</td><td>'+esc(it.cat)+'</td><td class="r"><span class="'+(lw?'lowstock':'okstock')+'">'+fmtN(it.qty)+' '+esc(it.unit)+'</span></td></tr>';});
     h+='</table></div>';
-    if(low.length)h+='<p class="muted" style="color:var(--bad)">Ispod minimalne zalihe: '+low.map(it=>esc(it.name)).join(', ')+'.</p>';
-    h+='<p class="muted">Napomena: zalihe prikazuju trenutno stanje, ne istoriju po godini.</p>';
-  }else h+='<p class="muted">Nema evidentiranih zaliha.</p>';
+    if(low.length)h+='<p class="muted" style="color:var(--bad)">Below minimum stock: '+low.map(it=>esc(it.name)).join(', ')+'.</p>';
+    h+='<p class="muted">Note: inventory shows the current state, not history by year.</p>';
+  }else h+='<p class="muted">No inventory recorded.</p>';
   h+='</div>';
 
   $('rp-out').innerHTML=h;
@@ -1861,16 +1861,16 @@ $('rp-gen').onclick=genReport;
 $('rp-print').onclick=()=>{if(!$('rp-out').innerHTML)genReport();window.print();};
 
 /* ---------- prognoza ---------- */
-const WMO={0:['Vedro','☀️'],1:['Pretežno vedro','🌤️'],2:['Delimično oblačno','⛅'],3:['Oblačno','☁️'],45:['Magla','🌫️'],48:['Magla','🌫️'],51:['Sitna kiša','🌦️'],53:['Sitna kiša','🌦️'],55:['Sitna kiša','🌧️'],61:['Kiša','🌧️'],63:['Kiša','🌧️'],65:['Jaka kiša','🌧️'],71:['Sneg','🌨️'],73:['Sneg','🌨️'],75:['Jak sneg','❄️'],80:['Pljuskovi','🌦️'],81:['Pljuskovi','🌧️'],82:['Jaki pljuskovi','⛈️'],95:['Grmljavina','⛈️'],96:['Grmljavina i grad','⛈️'],99:['Grmljavina i grad','⛈️']};
+const WMO={0:['Clear','☀️'],1:['Mostly clear','🌤️'],2:['Partly cloudy','⛅'],3:['Cloudy','☁️'],45:['Fog','🌫️'],48:['Fog','🌫️'],51:['Light rain','🌦️'],53:['Light rain','🌦️'],55:['Light rain','🌧️'],61:['Rain','🌧️'],63:['Rain','🌧️'],65:['Heavy rain','🌧️'],71:['Snow','🌨️'],73:['Snow','🌨️'],75:['Heavy snow','❄️'],80:['Showers','🌦️'],81:['Showers','🌧️'],82:['Heavy showers','⛈️'],95:['Thunderstorm','⛈️'],96:['Thunderstorm and hail','⛈️'],99:['Thunderstorm and hail','⛈️']};
 
 /* ---------- podaci: podešavanja, izvoz, uvoz ---------- */
 function loadSettings(){$('set-loc').value=store.settings.loc;$('set-lat').value=store.settings.lat;$('set-lon').value=store.settings.lon;$('set-cur').value=store.settings.cur;}
 $('set-save').onclick=()=>{
-  store.settings.loc=$('set-loc').value.trim()||'Voćnjak';
+  store.settings.loc=$('set-loc').value.trim()||'Orchard';
   store.settings.lat=parseFloat($('set-lat').value)||store.settings.lat;
   store.settings.lon=parseFloat($('set-lon').value)||store.settings.lon;
   store.settings.cur=$('set-cur').value.trim()||'RSD';
-  save();pgWxLoaded=false;renderFin();if(typeof renderPregled==='function')renderPregled();alert('Podešavanja su sačuvana.');
+  save();pgWxLoaded=false;renderFin();if(typeof renderOverview==='function')renderOverview();alert('Settings saved.');
 };
 function dl(name,content,mime){
   const a=document.createElement('a');
@@ -1885,39 +1885,39 @@ $('im-file').onchange=e=>{
   r.onload=()=>{try{const p=JSON.parse(r.result);
     if(!p.version){alert('Fajl ne izgleda kao ispravna kopija.');return;}
     store=p;store.taskYears=store.taskYears||[];store.customers=store.customers||[];store.inventory=store.inventory||[];store.contacts=store.contacts||[];store.yearPrices=store.yearPrices||{};store.harvestYears=store.harvestYears||[];store.finYears=store.finYears||[];store.years=store.years||[];store.planTemplate=store.planTemplate||null;store.tasks.forEach(t=>{t.kind=t.kind||'adhoc';t.notes=t.notes||[];});
-    save();rerenderAll();alert('Podaci su uvezeni.');}catch(err){alert('Neuspešno čitanje fajla.');}};
+    save();rerenderAll();alert('Data imported.');}catch(err){alert('Failed to read file.');}};
   r.readAsText(f);e.target.value='';
 };
 function csv(rows){const BOM='\uFEFF';return BOM+rows.map(r=>r.map(c=>'"'+String(c??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');}
-$('ex-hv').onclick=()=>dl('berba.csv',csv([['Datum','Red','Sorta','kg','Napomena'],...store.harvest.map(h=>[h.date,h.row,h.variety,h.kg,h.note])]),'text/csv');
-$('ex-fn').onclick=()=>dl('finansije.csv',csv([['Datum','Tip','Kategorija','Opis','Iznos','Valuta'],...store.fin.map(f=>[f.date,f.kind==='trosak'?'Trošak':'Prihod',f.cat,f.desc,f.amount,store.settings.cur])]),'text/csv');
-$('ex-tk').onclick=()=>dl('poslovi.csv',csv([['Datum','Tip posla','Vrsta','Obuhvat','Opis','Status','Obavljeno','Beleške'],...store.tasks.map(t=>[t.date,t.kind==='plan'?'Godišnji plan':'Vanredan',t.type,t.scope,t.desc,t.done?'Obavljeno':'Planirano',t.doneDate||'',(t.notes||[]).map(n=>n.d+' '+n.t).join(' | ')])]),'text/csv');
+$('ex-hv').onclick=()=>dl('harvest.csv',csv([['Date','Row','Variety','kg','Note'],...store.harvest.map(h=>[h.date,h.row,h.variety,h.kg,h.note])]),'text/csv');
+$('ex-fn').onclick=()=>dl('finances.csv',csv([['Date','Tip','Category','Opis','Amount','Currency'],...store.fin.map(f=>[f.date,f.kind==='trosak'?'Expense':'Income',f.cat,f.desc,f.amount,store.settings.cur])]),'text/csv');
+$('ex-tk').onclick=()=>dl('tasks.csv',csv([['Date','Task type','Type','Scope','Opis','Status','Done','Notes'],...store.tasks.map(t=>[t.date,t.kind==='plan'?'Annual plan':'Ad-hoc',t.type,t.scope,t.desc,t.done?'Done':'Planned',t.doneDate||'',(t.notes||[]).map(n=>n.d+' '+n.t).join(' | ')])]),'text/csv');
 $('ex-bu').onclick=()=>{
-  const rows=[['ID','Red','Sorta','Stanje','Godina sadnje','Beleške']];
+  const rows=[['ID','Row','Variety','Stock','Planting year','Notes']];
   DATA.forEach((row,i)=>{const rn=i+1,N=row.length;
     for(let k=0;k<N;k++){const id=bushKey(rn,N-k),v=row[k],rec=store.bushes[id];
       rows.push([id,'R'+rn,META[v].full,rec?rec.status||'ok':'ok',rec?rec.plant||'':'',rec&&rec.notes?rec.notes.map(n=>n.d+' '+n.t).join(' | '):'']);}});
-  dl('zbunovi.csv',csv(rows),'text/csv');
+  dl('bushes.csv',csv(rows),'text/csv');
 };
 $('ex-print').onclick=()=>window.print();
-$('ex-cu')&&($('ex-cu').onclick=()=>dl('kupci.csv',csv([['Godina','Ime','Kontakt','Adresa','Kanal','kg','Vrednost','Valuta','Isporuceno','Napomena'],...store.customers.map(c=>[(c.date||'').slice(0,4),c.name,c.contact,c.addr,c.chan,c.qty,c.val,store.settings.cur,c.delivered?'Da':'Ne',c.note])]),'text/csv'));
-$('ex-iv')&&($('ex-iv').onclick=()=>dl('zalihe.csv',csv([['Naziv','Kategorija','Stanje','Jedinica','Min'],...store.inventory.map(i=>[i.name,i.cat,i.qty,i.unit,i.min])]),'text/csv'));
-$('ex-ct')&&($('ex-ct').onclick=()=>dl('kontakti.csv',csv([['Ime','Uloga','Telefon','Mejl','Napomena'],...store.contacts.map(c=>[c.name,c.role,c.phone,c.email,c.note])]),'text/csv'));
+$('ex-cu')&&($('ex-cu').onclick=()=>dl('customers.csv',csv([['Year','Name','Contact','Address','Channel','kg','Value','Currency','Delivered','Note'],...store.customers.map(c=>[(c.date||'').slice(0,4),c.name,c.contact,c.addr,c.chan,c.qty,c.val,store.settings.cur,c.delivered?'Yes':'No',c.note])]),'text/csv'));
+$('ex-iv')&&($('ex-iv').onclick=()=>dl('inventory.csv',csv([['Name','Category','Stock','Unit','Min'],...store.inventory.map(i=>[i.name,i.cat,i.qty,i.unit,i.min])]),'text/csv'));
+$('ex-ct')&&($('ex-ct').onclick=()=>dl('contacts.csv',csv([['Name','Role','Phone','Email','Note'],...store.contacts.map(c=>[c.name,c.role,c.phone,c.email,c.note])]),'text/csv'));
 
 /* ---------- kupci i porudžbine ---------- */
 $('cu-price-apply').onclick=()=>{
   const p=parseFloat($('cu-year-price').value);
-  if(!p){alert('Unesi cenu po kg.');return;}
+  if(!p){alert('Enter price per kg.');return;}
   store.yearPrices[curYear]=p;
   let n=0;
   store.customers.filter(c=>(c.date||'').startsWith(curYear)).forEach(c=>{c.price=p;c.val=Math.round((+c.qty||0)*p);n++;});
   save();renderCustomers();
-  alert('Cena '+p+' primenjena na '+n+' porudžbina za '+curYear+'. Pojedinačno ih možeš menjati u tabeli.');
+  alert('Price '+p+' applied to '+n+' orders for '+curYear+'. You can change them individually in the table.');
 };
 $('cu-add').onclick=()=>{
-  if(atLimit('customers','Kupci'))return;
+  if(atLimit('customers','Customers'))return;
   const name=$('cu-name').value.trim();
-  if(!name){alert('Unesi ime kupca.');return;}
+  if(!name){alert('Enter customer name.');return;}
   const qty=parseFloat($('cu-qty').value)||0;
   let price=parseFloat($('cu-price').value)||0;
   if(!price&&store.yearPrices[curYear])price=store.yearPrices[curYear];
@@ -1931,17 +1931,17 @@ function renderCustomers(){
   const q=($('cu-search')&&$('cu-search').value.trim().toLowerCase())||'';
   const all=store.customers.filter(c=>(c.date||'').startsWith(curYear));
   const list=all.filter(c=>!q||(c.name||'').toLowerCase().includes(q)||(c.contact||'').toLowerCase().includes(q));
-  list.sort((a,b)=>a.name.localeCompare(b.name,'sr'));
+  list.sort((a,b)=>a.name.localeCompare(b.name,'en'));
   const pend=list.filter(c=>!c.delivered), done=list.filter(c=>c.delivered);
   function row(c){
-    const pill=c.delivered?'<span class="pill done">Isporučeno</span>':'<span class="pill">Naručeno</span>';
+    const pill=c.delivered?'<span class="pill done">Delivered</span>':'<span class="pill">Ordered</span>';
     const sub=fmtN(c.qty||0)+' kg · '+fmtN(c.val||0)+' '+cur+(c.chan?' · '+esc(c.chan):'');
     return '<div class="curow"><div class="cu-main" onclick="openCu(\''+c.id+'\')"><div class="cu-name">'+esc(c.name)+' '+pill+'</div><div class="cu-sub muted">'+sub+'</div></div>'+
-      '<div class="cu-act"><button class="btn small" onclick="toggleCuDeliver(\''+c.id+'\')">'+(c.delivered?'Poništi':'Isporuči')+'</button></div></div>';
+      '<div class="cu-act"><button class="btn small" onclick="toggleCuDeliver(\''+c.id+'\')">'+(c.delivered?'Undo':'Deliver')+'</button></div></div>';
   }
   const pbox=$('cu-pend-list'), dbox=$('cu-done-list');
-  if(pbox)pbox.innerHTML=pend.length?pend.map(row).join(''):'<p class="muted">'+(q?'Nema rezultata za pretragu.':'Nema porudžbina za isporuku u '+curYear+'.')+'</p>';
-  if(dbox)dbox.innerHTML=done.length?done.map(row).join(''):'<p class="muted">'+(q?'Nema rezultata za pretragu.':'Još nema isporučenih porudžbina u '+curYear+'.')+'</p>';
+  if(pbox)pbox.innerHTML=pend.length?pend.map(row).join(''):'<p class="muted">'+(q?'No search results.':'No orders to deliver in '+curYear+'.')+'</p>';
+  if(dbox)dbox.innerHTML=done.length?done.map(row).join(''):'<p class="muted">'+(q?'No search results.':'No delivered orders yet in '+curYear+'.')+'</p>';
   setCnt('cnt-cu-pend',pend.length);setCnt('cnt-cu-done',done.length);
   const sl=all;
   const totQty=sl.reduce((a,c)=>a+(+c.qty||0),0),totVal=sl.reduce((a,c)=>a+(+c.val||0),0);
@@ -1949,41 +1949,41 @@ function renderCustomers(){
   const delQty=dl.reduce((a,c)=>a+(+c.qty||0),0),delVal=dl.reduce((a,c)=>a+(+c.val||0),0);
   const pending=sl.length-delivered,pendQty=totQty-delQty,pendVal=totVal-delVal;
   $('cu-summary').innerHTML=sl.length?('<div class="report">'+
-    '<h4 class="sect">Ukupno naručeno</h4><div class="kpis">'+
-    '<div class="kpi"><div class="n">'+sl.length+'</div><div class="l">porudžbina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(totQty)+' kg</div><div class="l">količina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(totVal)+' '+cur+'</div><div class="l">vrednost</div></div>'+
+    '<h4 class="sect">Total ordered</h4><div class="kpis">'+
+    '<div class="kpi"><div class="n">'+sl.length+'</div><div class="l">orders</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(totQty)+' kg</div><div class="l">quantity</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(totVal)+' '+cur+'</div><div class="l">value</div></div>'+
     '</div>'+
-    '<h4 class="sect">Isporučeno</h4><div class="kpis">'+
-    '<div class="kpi"><div class="n">'+delivered+'</div><div class="l">isporučeno porudžbina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(delQty)+' kg</div><div class="l">isporučena količina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(delVal)+' '+cur+'</div><div class="l">naplaćena vrednost</div></div>'+
+    '<h4 class="sect">Delivered</h4><div class="kpis">'+
+    '<div class="kpi"><div class="n">'+delivered+'</div><div class="l">orders delivered</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(delQty)+' kg</div><div class="l">quantity delivered</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(delVal)+' '+cur+'</div><div class="l">revenue collected</div></div>'+
     '</div>'+
-    '<h4 class="sect">Preostalo za isporuku</h4><div class="kpis">'+
-    '<div class="kpi"><div class="n">'+pending+'</div><div class="l">porudžbina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(pendQty)+' kg</div><div class="l">količina</div></div>'+
-    '<div class="kpi"><div class="n">'+fmtN(pendVal)+' '+cur+'</div><div class="l">vrednost</div></div>'+
-    '</div></div>'):'<p class="muted">Nema porudžbina u '+curYear+'.</p>';
+    '<h4 class="sect">Left to deliver</h4><div class="kpis">'+
+    '<div class="kpi"><div class="n">'+pending+'</div><div class="l">orders</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(pendQty)+' kg</div><div class="l">quantity</div></div>'+
+    '<div class="kpi"><div class="n">'+fmtN(pendVal)+' '+cur+'</div><div class="l">value</div></div>'+
+    '</div></div>'):'<p class="muted">No orders in '+curYear+'.</p>';
 }
 function openCu(id){
   const c=store.customers.find(x=>x.id===id);if(!c)return;
   const cur=store.settings.cur||'RSD';
-  const chanOpts=['Instagram','Facebook','Telefon','Preporuka','Pijaca','Ostalo'].map(o=>'<option'+(c.chan===o?' selected':'')+'>'+o+'</option>').join('');
+  const chanOpts=['Instagram','Facebook','Phone','Referral','Market','Other'].map(o=>'<option'+(c.chan===o?' selected':'')+'>'+o+'</option>').join('');
   const tel=telHref(c.contact);
-  const telLine=tel?'<div class="sub"><a href="tel:'+esc(tel)+'">Pozovi '+esc(c.contact)+'</a></div>':'';
-  openModal('<h3>'+esc(c.name)+'</h3><div class="sub">'+fmtD(c.date||'')+' · '+(c.delivered?'Isporučeno':'Naručeno')+'</div>'+telLine+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Ime i prezime</label><input id="ec-name" value="'+esc(c.name||'')+'"></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1;min-width:150px"><label>Kontakt</label><input id="ec-contact" value="'+esc(c.contact||'')+'"></div>'+
-    '<div class="fld"><label>Kanal</label><select id="ec-chan">'+chanOpts+'</select></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Adresa</label><input id="ec-addr" value="'+esc(c.addr||'')+'"></div></div>'+
-    '<div class="formrow"><div class="fld"><label>Količina (kg)</label><input type="number" id="ec-qty" step="0.1" value="'+(c.qty||0)+'"></div>'+
-    '<div class="fld"><label>Cena/kg</label><input type="number" id="ec-price" step="1" value="'+(c.price||0)+'"></div>'+
-    '<div class="fld"><label>Vrednost</label><input value="'+fmtN(c.val||0)+' '+cur+'" disabled></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Napomena</label><input id="ec-note" value="'+esc(c.note||'')+'"></div></div>'+
-    '<div class="formrow"><button class="btn" onclick="saveCu(\''+id+'\')">Sačuvaj</button>'+
-    '<button class="btn sec" onclick="toggleCuDeliverM(\''+id+'\')">'+(c.delivered?'Poništi isporuku':'Označi isporučeno')+'</button></div>'+
-    '<div class="formrow"><button class="btn danger" onclick="delCuM(\''+id+'\')">Obriši kupca</button>'+
-    '<button class="btn sec" onclick="closeModal()">Zatvori</button></div>');
+  const telLine=tel?'<div class="sub"><a href="tel:'+esc(tel)+'">Call '+esc(c.contact)+'</a></div>':'';
+  openModal('<h3>'+esc(c.name)+'</h3><div class="sub">'+fmtD(c.date||'')+' · '+(c.delivered?'Delivered':'Ordered')+'</div>'+telLine+
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Full name</label><input id="ec-name" value="'+esc(c.name||'')+'"></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1;min-width:150px"><label>Contact</label><input id="ec-contact" value="'+esc(c.contact||'')+'"></div>'+
+    '<div class="fld"><label>Channel</label><select id="ec-chan">'+chanOpts+'</select></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Address</label><input id="ec-addr" value="'+esc(c.addr||'')+'"></div></div>'+
+    '<div class="formrow"><div class="fld"><label>Quantity (kg)</label><input type="number" id="ec-qty" step="0.1" value="'+(c.qty||0)+'"></div>'+
+    '<div class="fld"><label>Price/kg</label><input type="number" id="ec-price" step="1" value="'+(c.price||0)+'"></div>'+
+    '<div class="fld"><label>Value</label><input value="'+fmtN(c.val||0)+' '+cur+'" disabled></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Note</label><input id="ec-note" value="'+esc(c.note||'')+'"></div></div>'+
+    '<div class="formrow"><button class="btn" onclick="saveCu(\''+id+'\')">Save</button>'+
+    '<button class="btn sec" onclick="toggleCuDeliverM(\''+id+'\')">'+(c.delivered?'Undo delivery':'Mark delivered')+'</button></div>'+
+    '<div class="formrow"><button class="btn danger" onclick="delCuM(\''+id+'\')">Delete customer</button>'+
+    '<button class="btn sec" onclick="closeModal()">Close</button></div>');
 }
 function saveCu(id){
   const c=store.customers.find(x=>x.id===id);if(!c)return;
@@ -1999,8 +1999,8 @@ function saveCu(id){
 }
 function toggleCuDeliver(id){const c=store.customers.find(x=>x.id===id);if(c){c.delivered=!c.delivered;save();renderCustomers();}}
 function toggleCuDeliverM(id){const c=store.customers.find(x=>x.id===id);if(c){c.delivered=!c.delivered;save();renderCustomers();openCu(id);}}
-function delCu(id){if(!confirm('Obrisati kupca?'))return;store.customers=store.customers.filter(x=>x.id!==id);save();renderCustomers();}
-function delCuM(id){if(!confirm('Obrisati kupca?'))return;store.customers=store.customers.filter(x=>x.id!==id);save();renderCustomers();closeModal();}
+function delCu(id){if(!confirm('Delete customer?'))return;store.customers=store.customers.filter(x=>x.id!==id);save();renderCustomers();}
+function delCuM(id){if(!confirm('Delete customer?'))return;store.customers=store.customers.filter(x=>x.id!==id);save();renderCustomers();closeModal();}
 
 document.querySelectorAll('#cu-sub button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#cu-sub button').forEach(x=>x.classList.toggle('on',x===b));
@@ -2011,58 +2011,58 @@ if($('cu-search'))$('cu-search').oninput=()=>renderCustomers();
 
 /* ---------- zalihe ---------- */
 $('iv-add').onclick=()=>{
-  if(atLimit('inventory','Magacin'))return;
+  if(atLimit('inventory','Inventory'))return;
   const name=$('iv-name').value.trim();
-  if(!name){alert('Unesi naziv stavke.');return;}
-  store.inventory.push({id:uid(),name:name,cat:$('iv-cat').value,qty:parseFloat($('iv-qty').value)||0,unit:$('iv-unit').value.trim()||'kom',min:parseFloat($('iv-min').value)||0});
+  if(!name){alert('Enter item name.');return;}
+  store.inventory.push({id:uid(),name:name,cat:$('iv-cat').value,qty:parseFloat($('iv-qty').value)||0,unit:$('iv-unit').value.trim()||'pcs',min:parseFloat($('iv-min').value)||0});
   ['iv-name','iv-qty','iv-unit','iv-min'].forEach(id=>$(id).value='');
   save();renderInventory();
 };
-function delIv(id){if(!confirm('Obrisati stavku?'))return;store.inventory=store.inventory.filter(x=>x.id!==id);save();renderInventory();}
+function delIv(id){if(!confirm('Delete item?'))return;store.inventory=store.inventory.filter(x=>x.id!==id);save();renderInventory();}
 function adjIv(id,d){const it=store.inventory.find(x=>x.id===id);if(it){it.qty=Math.max(0,(+it.qty||0)+d);save();renderInventory();}}
 function setIv(id,val){const it=store.inventory.find(x=>x.id===id);if(it){it.qty=parseFloat(val)||0;save();renderInventory();}}
 function renderInventory(){
   const tb=document.querySelector('#iv-table tbody');tb.innerHTML='';
   const cats={};store.inventory.forEach(it=>{(cats[it.cat]=cats[it.cat]||[]).push(it);});
   Object.keys(cats).sort().forEach(cat=>{
-    cats[cat].sort((a,b)=>a.name.localeCompare(b.name,'sr')).forEach(it=>{
+    cats[cat].sort((a,b)=>a.name.localeCompare(b.name,'en')).forEach(it=>{
       const low=it.min>0&&it.qty<=it.min;
       const tr=document.createElement('tr');
       tr.innerHTML='<td>'+esc(it.name)+'</td><td>'+esc(it.cat)+'</td>'+
         '<td class="r"><span class="'+(low?'lowstock':'okstock')+'">'+fmtN(it.qty)+' '+esc(it.unit)+'</span>'+(low?' ⚠':'')+'</td>'+
         '<td>'+(it.min>0?fmtN(it.min)+' '+esc(it.unit):'-')+'</td>'+
         '<td style="white-space:nowrap"><button class="btn sec small" onclick="adjIv(\''+it.id+'\',-1)">-1</button> <button class="btn sec small" onclick="adjIv(\''+it.id+'\',1)">+1</button> <input type="number" value="'+it.qty+'" onchange="setIv(\''+it.id+'\',this.value)" style="width:64px;border:1px solid var(--line);border-radius:6px;padding:3px 5px;font-size:12px"></td>'+
-        '<td><button class="btn danger small" onclick="delIv(\''+it.id+'\')">Obriši</button></td>';
+        '<td><button class="btn danger small" onclick="delIv(\''+it.id+'\')">Delete</button></td>';
       tb.appendChild(tr);
     });
   });
-  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">Nema stavki na stanju. Dodaj prvu iznad.</td></tr>';
+  if(!tb.children.length)tb.innerHTML='<tr><td colspan="6" class="muted">No items in stock. Add the first one above.</td></tr>';
 }
 
 /* ---------- kontakti ---------- */
 $('ct-add').onclick=()=>{
-  if(atLimit('contacts','Kontakti'))return;
+  if(atLimit('contacts','Contacts'))return;
   const name=$('ct-name').value.trim();
-  if(!name){alert('Unesi ime kontakta.');return;}
+  if(!name){alert('Enter contact name.');return;}
   store.contacts.push({id:uid(),name:name,role:$('ct-role').value,phone:$('ct-phone').value.trim(),email:$('ct-email').value.trim(),note:$('ct-note').value.trim()});
   ['ct-name','ct-phone','ct-email','ct-note'].forEach(id=>$(id).value='');
   save();renderContacts();
 };
-function delCt(id){if(!confirm('Obrisati kontakt?'))return;store.contacts=store.contacts.filter(x=>x.id!==id);save();renderContacts();}
-const CT_ROLES=['Radnik','Dobavljač','Kooperant','Majstor','Prevoz','Ostalo'];
+function delCt(id){if(!confirm('Delete contact?'))return;store.contacts=store.contacts.filter(x=>x.id!==id);save();renderContacts();}
+const CT_ROLES=['Worker','Supplier','Partner','Tradesman','Transport','Other'];
 function openCt(id){
   const c=store.contacts.find(x=>x.id===id);if(!c)return;
   const roleOpts=CT_ROLES.map(o=>'<option'+(c.role===o?' selected':'')+'>'+o+'</option>').join('');
-  const tel=c.phone?('<div class="sub"><a href="tel:'+esc(c.phone)+'">Pozovi '+esc(c.phone)+'</a></div>'):'';
+  const tel=c.phone?('<div class="sub"><a href="tel:'+esc(c.phone)+'">Call '+esc(c.phone)+'</a></div>'):'';
   openModal('<h3>'+esc(c.name)+'</h3><div class="sub">'+esc(c.role||'')+'</div>'+tel+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Ime</label><input id="ct-e-name" value="'+esc(c.name||'')+'"></div>'+
-    '<div class="fld"><label>Uloga</label><select id="ct-e-role">'+roleOpts+'</select></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Telefon</label><input id="ct-e-phone" value="'+esc(c.phone||'')+'"></div>'+
-    '<div class="fld" style="flex:1"><label>Mejl</label><input id="ct-e-email" value="'+esc(c.email||'')+'"></div></div>'+
-    '<div class="formrow"><div class="fld" style="flex:1"><label>Napomena</label><input id="ct-e-note" value="'+esc(c.note||'')+'"></div></div>'+
-    '<div class="formrow"><button class="btn" onclick="saveCt(\''+id+'\')">Sačuvaj</button>'+
-    '<button class="btn danger" onclick="delCtM(\''+id+'\')">Obriši</button>'+
-    '<button class="btn sec" onclick="closeModal()">Zatvori</button></div>');
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Name</label><input id="ct-e-name" value="'+esc(c.name||'')+'"></div>'+
+    '<div class="fld"><label>Role</label><select id="ct-e-role">'+roleOpts+'</select></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Phone</label><input id="ct-e-phone" value="'+esc(c.phone||'')+'"></div>'+
+    '<div class="fld" style="flex:1"><label>Email</label><input id="ct-e-email" value="'+esc(c.email||'')+'"></div></div>'+
+    '<div class="formrow"><div class="fld" style="flex:1"><label>Note</label><input id="ct-e-note" value="'+esc(c.note||'')+'"></div></div>'+
+    '<div class="formrow"><button class="btn" onclick="saveCt(\''+id+'\')">Save</button>'+
+    '<button class="btn danger" onclick="delCtM(\''+id+'\')">Delete</button>'+
+    '<button class="btn sec" onclick="closeModal()">Close</button></div>');
 }
 function saveCt(id){
   const c=store.contacts.find(x=>x.id===id);if(!c)return;
@@ -2073,31 +2073,31 @@ function saveCt(id){
   c.note=$('ct-e-note').value.trim();
   save();renderContacts();closeModal();
 }
-function delCtM(id){if(!confirm('Obrisati kontakt?'))return;store.contacts=store.contacts.filter(x=>x.id!==id);save();renderContacts();closeModal();}
+function delCtM(id){if(!confirm('Delete contact?'))return;store.contacts=store.contacts.filter(x=>x.id!==id);save();renderContacts();closeModal();}
 function renderContacts(){
   const box=$('ct-cards');box.innerHTML='';
   const byRole={};store.contacts.forEach(c=>{(byRole[c.role]=byRole[c.role]||[]).push(c);});
-  const order=['Radnik','Dobavljač','Kooperant','Majstor','Prevoz','Ostalo'];
+  const order=['Worker','Supplier','Partner','Tradesman','Transport','Other'];
   order.filter(r=>byRole[r]).forEach(role=>{
-    byRole[role].sort((a,b)=>a.name.localeCompare(b.name,'sr')).forEach(c=>{
+    byRole[role].sort((a,b)=>a.name.localeCompare(b.name,'en')).forEach(c=>{
       const card=document.createElement('div');card.className='ccard';
       card.innerHTML='<div class="nm">'+esc(c.name)+'</div><div class="rl">'+esc(c.role)+'</div>'+
         (c.phone?'<div class="ln">☎ <a href="tel:'+esc(c.phone)+'">'+esc(c.phone)+'</a></div>':'')+
         (c.email?'<div class="ln">✉ <a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></div>':'')+
         (c.note?'<div class="ln">'+esc(c.note)+'</div>':'')+
-        '<div class="acts"><button class="btn sec small" onclick="openCt(\''+c.id+'\')">Uredi</button> <button class="btn danger small" onclick="delCt(\''+c.id+'\')">Obriši</button></div>';
+        '<div class="acts"><button class="btn sec small" onclick="openCt(\''+c.id+'\')">Edit</button> <button class="btn danger small" onclick="delCt(\''+c.id+'\')">Delete</button></div>';
       box.appendChild(card);
     });
   });
-  if(!box.children.length)box.innerHTML='<p class="muted">Nema kontakata. Dodaj radnike, dobavljače i majstore iznad.</p>';
+  if(!box.children.length)box.innerHTML='<p class="muted">No contacts. Add workers, suppliers and tradesmen above.</p>';
 }
 
 /* ---------- init ---------- */
-function rerenderAll(){headerStats();renderLegend();renderMap();renderTotals();renderGlobalYear();renderTasks();renderHarvest();renderFin();renderCustomers();renderInventory();renderContacts();fillReportYears();loadSettings();if(typeof renderPregled==='function')renderPregled();save();}
+function rerenderAll(){headerStats();renderLegend();renderMap();renderTotals();renderGlobalYear();renderTasks();renderHarvest();renderFin();renderCustomers();renderInventory();renderContacts();fillReportYears();loadSettings();if(typeof renderOverview==='function')renderOverview();save();}
 $('gl-year').onchange=function(){setYear(this.value);};
 $('gl-year-add').onclick=()=>{
-  const y=prompt('Koju godinu dodati?',String(+curYear+1));
-  if(!y||!/^\d{4}$/.test(y.trim())){if(y!==null&&y.trim())alert('Unesi godinu u formatu 2027.');return;}
+  const y=prompt('Which year to add?',String(+curYear+1));
+  if(!y||!/^\d{4}$/.test(y.trim())){if(y!==null&&y.trim())alert('Enter the year in the format 2027.');return;}
   addYear(y.trim());setYear(y.trim());
 };
 rerenderAll();
